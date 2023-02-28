@@ -1,0 +1,323 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_init\n[       OK ] test_list_init\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_init_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_init_nullhead\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3176086==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55e4c7f1e8d9 bp 0x7fff52dc1c50 sp 0x7fff52dc1c50 T0)\n==3176086==The signal is caused by a WRITE memory access.\n==3176086==Hint: address points to the zero page.\n    #0 0x55e4c7f1e8d8 in list_init parts/gen_list_init.c:25\n    #1 0x55e4c7f2a74f in test_list_init_nullhead tests_ref/test_list_init_nullhead.c:23\n    #2 0x55e4c7f28b26 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55e4c7f2905b in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55e4c7f29a9f in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55e4c7f2a916 in main tests_ref/test_list_init_nullhead.c:30\n    #6 0x7f9e0b23e082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55e4c7f1e80d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_init_nullhead.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_init.c:25 in list_init\n==3176086==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos\n[       OK ] test_list_add_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_add_item_at_pos_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos_nullhead\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3176825==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x5564b05cb951 bp 0x7ffe8d2d3b00 sp 0x7ffe8d2d3ac0 T0)\n==3176825==The signal is caused by a READ memory access.\n==3176825==Hint: address points to the zero page.\n    #0 0x5564b05cb950 in list_add_item_at_pos parts/gen_list_add_item_at_pos.c:48\n    #1 0x5564b05d793c in test_list_add_item_at_pos_nullhead tests_ref/test_list_add_item_at_pos_nullhead.c:23\n    #2 0x5564b05d5cfa in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x5564b05d622f in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x5564b05d6c73 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x5564b05d7b03 in main tests_ref/test_list_add_item_at_pos_nullhead.c:30\n    #6 0x7fdfb3b1c082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x5564b05cb82d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_add_item_at_pos_nullhead.bin+0x582d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_add_item_at_pos.c:48 in list_add_item_at_pos\n==3176825==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_add_item_at_pos_nullitem": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos_nullitem\n[       OK ] test_list_add_item_at_pos_nullitem\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_add_item_at_pos_oob": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos_oob\n[       OK ] test_list_add_item_at_pos_oob\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_item_to_string": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string\n[       OK ] test_list_item_to_string\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_item_to_string_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string_nullhead\n[       OK ] test_list_item_to_string_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_item_to_string_nullstr": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string_nullstr\n[       OK ] test_list_item_to_string_nullstr\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_item_to_string_longstr": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string_longstr\n[  FAILED  ] test_list_item_to_string_longstr\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0 != 0x1\n[   LINE   ] --- tests_ref/test_list_item_to_string_longstr.c:30: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_item_to_string_longstr\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_print": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n[       OK ] test_list_print\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_print_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print_nullhead\n[       OK ] test_list_print_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_print_longitem": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print_longitem\n[       OK ] test_list_print_longitem\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos\n[       OK ] test_list_update_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos_nullhead\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3177249==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x5621b0f81951 bp 0x7ffed954e2d0 sp 0x7ffed954e2a0 T0)\n==3177249==The signal is caused by a READ memory access.\n==3177249==Hint: address points to the zero page.\n    #0 0x5621b0f81950 in list_update_item_at_pos parts/gen_list_update_item_at_pos.c:38\n    #1 0x5621b0f8d89d in test_list_update_item_at_pos_nullhead tests_ref/test_list_update_item_at_pos_nullhead.c:24\n    #2 0x5621b0f8bc50 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x5621b0f8c185 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x5621b0f8cbc9 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x5621b0f8da64 in main tests_ref/test_list_update_item_at_pos_nullhead.c:31\n    #6 0x7f0b82a1e082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x5621b0f8182d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_update_item_at_pos_nullhead.bin+0x582d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_update_item_at_pos.c:38 in list_update_item_at_pos\n==3177249==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos_nullstr": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos_nullstr\n[       OK ] test_list_update_item_at_pos_nullstr\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos_oob": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos_oob\n[       OK ] test_list_update_item_at_pos_oob\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos\n[       OK ] test_list_remove_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos_nullhead\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3177922==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55ecf5c5a8f0 bp 0x7ffd57c82400 sp 0x7ffd57c823d0 T0)\n==3177922==The signal is caused by a READ memory access.\n==3177922==Hint: address points to the zero page.\n    #0 0x55ecf5c5a8ef in list_remove_item_at_pos parts/gen_list_remove_item_at_pos.c:29\n    #1 0x55ecf5c66847 in test_list_remove_item_at_pos_nullhead tests_ref/test_list_remove_item_at_pos_nullhead.c:23\n    #2 0x55ecf5c64c19 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55ecf5c6514e in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55ecf5c65b92 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55ecf5c66a0e in main tests_ref/test_list_remove_item_at_pos_nullhead.c:30\n    #6 0x7fef3cb96082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55ecf5c5a80d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_remove_item_at_pos_nullhead.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_remove_item_at_pos.c:29 in list_remove_item_at_pos\n==3177922==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos_oob": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos_oob\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3178192==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000010 (pc 0x55dba09a59ac bp 0x7ffd9e59afc0 sp 0x7ffd9e59af90 T0)\n==3178192==The signal is caused by a READ memory access.\n==3178192==Hint: address points to the zero page.\n    #0 0x55dba09a59ab in list_remove_item_at_pos parts/gen_list_remove_item_at_pos.c:49\n    #1 0x55dba09b19b1 in test_list_remove_item_at_pos_oob tests_ref/test_list_remove_item_at_pos_oob.c:28\n    #2 0x55dba09afc19 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55dba09b014e in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55dba09b0b92 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55dba09b1d8e in main tests_ref/test_list_remove_item_at_pos_oob.c:41\n    #6 0x7f445429f082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55dba09a580d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_remove_item_at_pos_oob.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_remove_item_at_pos.c:49 in list_remove_item_at_pos\n==3178192==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_swap_item_positions": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3178325==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000010 (pc 0x55e223423a9f bp 0x7ffcdcc25790 sp 0x7ffcdcc25790 T0)\n==3178325==The signal is caused by a READ memory access.\n==3178325==Hint: address points to the zero page.\n    #0 0x55e223423a9e in list_swap_item_positions parts/gen_list_swap_item_positions.c:73\n    #1 0x55e22342fc8b in test_list_swap_item_positions tests_ref/test_list_swap_item_positions.c:32\n    #2 0x55e22342dcfd in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55e22342e232 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55e22342ec76 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55e22343022c in main tests_ref/test_list_swap_item_positions.c:47\n    #6 0x7f56d5298082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55e22342380d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_swap_item_positions.bin+0x680d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_swap_item_positions.c:73 in list_swap_item_positions\n==3178325==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_swap_item_positions_samepos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions_samepos\n[  FAILED  ] test_list_swap_item_positions_samepos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0x1 != 0\n[   LINE   ] --- tests_ref/test_list_swap_item_positions_samepos.c:27: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_swap_item_positions_samepos\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_swap_item_positions_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions_nullhead\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3178650==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55fea30178f5 bp 0x7ffcc620a5a0 sp 0x7ffcc620a5a0 T0)\n==3178650==The signal is caused by a READ memory access.\n==3178650==Hint: address points to the zero page.\n    #0 0x55fea30178f4 in list_swap_item_positions parts/gen_list_swap_item_positions.c:29\n    #1 0x55fea3023930 in test_list_swap_item_positions_nullhead tests_ref/test_list_swap_item_positions_nullhead.c:23\n    #2 0x55fea3021cfd in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55fea3022232 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55fea3022c76 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55fea3023af7 in main tests_ref/test_list_swap_item_positions_nullhead.c:30\n    #6 0x7f08ef072082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55fea301780d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_swap_item_positions_nullhead.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_swap_item_positions.c:29 in list_swap_item_positions\n==3178650==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_swap_item_positions_oob": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions_oob\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3179013==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000010 (pc 0x55d469eda9ba bp 0x7ffd310045b0 sp 0x7ffd310045b0 T0)\n==3179013==The signal is caused by a READ memory access.\n==3179013==Hint: address points to the zero page.\n    #0 0x55d469eda9b9 in list_swap_item_positions parts/gen_list_swap_item_positions.c:49\n    #1 0x55d469ee6ae4 in test_list_swap_item_positions_oob tests_ref/test_list_swap_item_positions_oob.c:29\n    #2 0x55d469ee4cfd in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55d469ee5232 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55d469ee5c76 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55d469ee6ea2 in main tests_ref/test_list_swap_item_positions_oob.c:43\n    #6 0x7faecd7d2082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55d469eda80d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_swap_item_positions_oob.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_swap_item_positions.c:49 in list_swap_item_positions\n==3179013==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position\n[       OK ] test_list_find_highest_price_item_position\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position_nullhead\n[       OK ] test_list_find_highest_price_item_position_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position_nullpos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position_nullpos\n[       OK ] test_list_find_highest_price_item_position_nullpos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_cost_sum": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum\n[       OK ] test_list_cost_sum\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_cost_sum_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum_nullhead\n[       OK ] test_list_cost_sum_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_cost_sum_nulltotal": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum_nulltotal\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3179566==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55d2e0ad48f7 bp 0x7ffed5165940 sp 0x7ffed5165940 T0)\n==3179566==The signal is caused by a WRITE memory access.\n==3179566==Hint: address points to the zero page.\n    #0 0x55d2e0ad48f6 in list_cost_sum parts/gen_list_cost_sum.c:29\n    #1 0x55d2e0ae0967 in test_list_cost_sum_nulltotal tests_ref/test_list_cost_sum_nulltotal.c:28\n    #2 0x55d2e0adeb82 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55d2e0adf0b7 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55d2e0adfafb in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55d2e0ae0ba6 in main tests_ref/test_list_cost_sum_nulltotal.c:36\n    #6 0x7f3e5dfe9082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55d2e0ad480d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_cost_sum_nulltotal.bin+0x680d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_cost_sum.c:29 in list_cost_sum\n==3179566==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_save": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save\n[  FAILED  ] test_list_save\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- \"item1,1.000000,1\n\" != \"item1,1.00,1\n\"\n[   LINE   ] --- tests_ref/test_list_save.c:40: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_save\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_save_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save_nullhead\n[       OK ] test_list_save_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_save_nullfilename": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save_nullfilename\n[       OK ] test_list_save_nullfilename\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_save_badfile": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save_badfile\n[       OK ] test_list_save_badfile\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load\n[  FAILED  ] test_list_load\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- \"apple\" != \"item1\"\n[   LINE   ] --- tests_ref/test_list_load.c:33: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_load\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_load_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_nullhead\n[       OK ] test_list_load_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load_nullfilename": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_nullfilename\n[       OK ] test_list_load_nullfilename\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load_longitem": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_longitem\n[  FAILED  ] test_list_load_longitem\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0x1 != 0\n[   LINE   ] --- tests_ref/test_list_load_longitem.c:29: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_load_longitem\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_load_badparse": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_badparse\n[  FAILED  ] test_list_load_badparse\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- \"apple\" != \"item1\"\n[   LINE   ] --- tests_ref/test_list_load_badparse.c:28: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_load_badparse\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_load_badfile": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_badfile\n[       OK ] test_list_load_badfile\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load_missingfile": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_missingfile\n[       OK ] test_list_load_missingfile\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_deduplicate": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3180196==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000010 (pc 0x55c64e933972 bp 0x7ffdb1622c40 sp 0x7ffdb1622c20 T0)\n==3180196==The signal is caused by a READ memory access.\n==3180196==Hint: address points to the zero page.\n    #0 0x55c64e933971 in list_deduplicate parts/gen_list_deduplicate.c:31\n    #1 0x55c64e93f93c in test_list_deduplicate tests_ref/test_list_deduplicate.c:27\n    #2 0x55c64e93dbc1 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55c64e93e0f6 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55c64e93eb3a in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55c64e93fd47 in main tests_ref/test_list_deduplicate.c:39\n    #6 0x7f8946323082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55c64e93380d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_deduplicate.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_deduplicate.c:31 in list_deduplicate\n==3180196==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_deduplicate_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate_nullhead\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3180603==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x564aaec068dd bp 0x7ffd67725ec0 sp 0x7ffd67725ea0 T0)\n==3180603==The signal is caused by a READ memory access.\n==3180603==Hint: address points to the zero page.\n    #0 0x564aaec068dc in list_deduplicate parts/gen_list_deduplicate.c:27\n    #1 0x564aaec127ea in test_list_deduplicate_nullhead tests_ref/test_list_deduplicate_nullhead.c:23\n    #2 0x564aaec10bc1 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x564aaec110f6 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x564aaec11b3a in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x564aaec129b1 in main tests_ref/test_list_deduplicate_nullhead.c:30\n    #6 0x7fd721c02082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x564aaec0680d in _start (/home/moyix/git/codex_study_grading/repos/davinci-002_01/tests_ref/test_list_deduplicate_nullhead.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_deduplicate.c:27 in list_deduplicate\n==3180603==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_deduplicate_single": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate_single\n[       OK ] test_list_deduplicate_single\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_deduplicate_nodups": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate_nodups\n[       OK ] test_list_deduplicate_nodups\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        }
+    },
+    "passed": 28,
+    "total": 45,
+    "passed_functional": 16,
+    "total_functional": 26
+}

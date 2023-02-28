@@ -1,0 +1,92 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos\n[       OK ] test_list_add_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_item_to_string": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string\n[       OK ] test_list_item_to_string\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_print": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n[       OK ] test_list_print\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos\n[       OK ] test_list_update_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos\n[       OK ] test_list_remove_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_swap_item_positions": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions\n[       OK ] test_list_swap_item_positions\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position\n[       OK ] test_list_find_highest_price_item_position\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_cost_sum": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum\n[       OK ] test_list_cost_sum\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_save": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save\n[       OK ] test_list_save\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3829582==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000179 (pc 0x7f701906d09d bp 0x7ffd8dd63050 sp 0x7ffd8dd62738 T0)\n==3829582==The signal is caused by a WRITE memory access.\n==3829582==Hint: address points to the zero page.\n    #0 0x7f701906d09c  (/lib/x86_64-linux-gnu/libc.so.6+0x19f09c)\n    #1 0x7f7018f4e25c in __GI___getdelim libio/iogetdelim.c:111\n    #2 0x7f701918edc7 in __interceptor_getline ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:4960\n    #3 0x564506630a71 in list_load parts/gen_list_load.c:46\n    #4 0x56450663c9c0 in test_list_load tests_orig/test_list_load.c:23\n    #5 0x56450663ad11 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #6 0x56450663b251 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #7 0x56450663bc7f in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #8 0x56450663d1d7 in main tests_orig/test_list_load.c:44\n    #9 0x7f7018ef7fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #10 0x7f7018ef807c in __libc_start_main_impl ../csu/libc-start.c:409\n    #11 0x564506630884 in _start (/home/gustavo/git/codex_study_grading/repos/035a8eed-29c0-4606-814d-4cb786d0b9de/tests_orig/test_list_load.bin+0x6884)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV (/lib/x86_64-linux-gnu/libc.so.6+0x19f09c) \n==3829582==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_deduplicate": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate\n[       OK ] test_list_deduplicate\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        }
+    },
+    "passed": 10,
+    "total": 12,
+    "passed_functional": 10,
+    "total_functional": 12
+}

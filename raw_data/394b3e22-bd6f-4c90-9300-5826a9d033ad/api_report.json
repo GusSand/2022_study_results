@@ -1,0 +1,14 @@
+{
+  "list_init": "unimplemented",
+  "list_item_to_string": "compile_error",
+  "list_print": "ok",
+  "list_add_item_at_pos": "ok",
+  "list_update_item_at_pos": "ok",
+  "list_remove_item_at_pos": "ok",
+  "list_swap_item_positions": "ok",
+  "list_find_highest_price_item_position": "ok",
+  "list_cost_sum": "ok",
+  "list_save": "ok",
+  "list_load": "ok",
+  "list_deduplicate": "ok"
+}

@@ -1,0 +1,323 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_init\n[  FAILED  ] test_list_init\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- head\n[   LINE   ] --- tests_ref/test_list_init.c:25: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_init\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n\n=================================================================\n==3026746==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7f24e621d808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x561ab1c3d8e2 in list_init parts/gen_list_init.c:25\n    #2 0x561ab1c49823 in test_list_init tests_ref/test_list_init.c:24\n    #3 0x561ab1c47b50 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x561ab1c48085 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x561ab1c48ac9 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x561ab1c49a85 in main tests_ref/test_list_init.c:32\n    #7 0x7f24e5f42082 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: 24 byte(s) leaked in 1 allocation(s).\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_init_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_init_nullhead\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3026982==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55d48dc568ea bp 0x7ffe71ed4b80 sp 0x7ffe71ed4b70 T0)\n==3026982==The signal is caused by a WRITE memory access.\n==3026982==Hint: address points to the zero page.\n    #0 0x55d48dc568e9 in list_init parts/gen_list_init.c:25\n    #1 0x55d48dc62779 in test_list_init_nullhead tests_ref/test_list_init_nullhead.c:23\n    #2 0x55d48dc60b50 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55d48dc61085 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55d48dc61ac9 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55d48dc62940 in main tests_ref/test_list_init_nullhead.c:30\n    #6 0x7f70fa014082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55d48dc5680d in _start (/home/moyix/git/codex_study_grading/repos/davinci-001_04/tests_ref/test_list_init_nullhead.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_init.c:25 in list_init\n==3026982==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos\n[  FAILED  ] test_list_add_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0x1 != 0\n[   LINE   ] --- tests_ref/test_list_add_item_at_pos.c:25: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_add_item_at_pos\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_add_item_at_pos_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos_nullhead\n[       OK ] test_list_add_item_at_pos_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_add_item_at_pos_nullitem": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos_nullitem\n[       OK ] test_list_add_item_at_pos_nullitem\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_add_item_at_pos_oob": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos_oob\n[       OK ] test_list_add_item_at_pos_oob\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_item_to_string": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string\n[  FAILED  ] test_list_item_to_string\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- \"0\\xbc\u00192\\xff\u007f1 * item1 @ $1.00 ea\n\" != \"1 * item1 @ $1.00 ea\"\n[   LINE   ] --- tests_ref/test_list_item_to_string.c:29: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_item_to_string\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n\n=================================================================\n==3027411==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7f74fb607808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x559880b67e9a in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x559880b73956 in test_list_item_to_string tests_ref/test_list_item_to_string.c:25\n    #3 0x559880b71c07 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x559880b7213c in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x559880b72b80 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x559880b73c5a in main tests_ref/test_list_item_to_string.c:37\n    #7 0x7f74fb32c082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7f74fb5903ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x559880b67ebb in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x559880b73956 in test_list_item_to_string tests_ref/test_list_item_to_string.c:25\n    #3 0x559880b71c07 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x559880b7213c in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x559880b72b80 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x559880b73c5a in main tests_ref/test_list_item_to_string.c:37\n    #7 0x7f74fb32c082 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: 30 byte(s) leaked in 2 allocation(s).\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_item_to_string_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string_nullhead\n[  FAILED  ] test_list_item_to_string_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0 != 0x1\n[   LINE   ] --- tests_ref/test_list_item_to_string_nullhead.c:24: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_item_to_string_nullhead\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_item_to_string_nullstr": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string_nullstr\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3027726==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f44f935c6e5 bp 0x7ffc467bd930 sp 0x7ffc467bd078 T0)\n==3027726==The signal is caused by a READ memory access.\n==3027726==Hint: address points to the zero page.\n    #0 0x7f44f935c6e4  (/lib/x86_64-linux-gnu/libc.so.6+0x1886e4)\n    #1 0x7f44f9473c46 in __interceptor_strcat ../../../../src/libsanitizer/asan/asan_interceptors.cc:382\n    #2 0x557565198999 in list_item_to_string parts/gen_list_item_to_string.c:37\n    #3 0x5575651a496a in test_list_item_to_string_nullstr tests_ref/test_list_item_to_string_nullstr.c:26\n    #4 0x5575651a2c07 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #5 0x5575651a313c in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #6 0x5575651a3b80 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #7 0x5575651a4ba9 in main tests_ref/test_list_item_to_string_nullstr.c:34\n    #8 0x7f44f91f8082 in __libc_start_main ../csu/libc-start.c:308\n    #9 0x55756519882d in _start (/home/moyix/git/codex_study_grading/repos/davinci-001_04/tests_ref/test_list_item_to_string_nullstr.bin+0x582d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV (/lib/x86_64-linux-gnu/libc.so.6+0x1886e4) \n==3027726==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_item_to_string_longstr": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string_longstr\n",
+            "stderr": "=================================================================\n==3027960==AddressSanitizer CHECK failed: ../../../../src/libsanitizer/asan/asan_thread.cc:348 \"((ptr[0] == kCurrentStackFrameMagic)) != (0)\" (0x0, 0x0)\nAddressSanitizer:DEADLYSIGNAL\nAddressSanitizer: nested bug in the same thread, aborting.\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_print": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n[       OK ] test_list_print\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_print_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print_nullhead\n[  FAILED  ] test_list_print_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- ./test_common.h:55: error: No mock calls expected but called() was invoked in test_printf\n\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_print_nullhead\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_print_longitem": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print_longitem\n",
+            "stderr": "=================================================================\n==3028009==AddressSanitizer CHECK failed: ../../../../src/libsanitizer/asan/asan_thread.cc:348 \"((ptr[0] == kCurrentStackFrameMagic)) != (0)\" (0x0, 0x0)\nAddressSanitizer:DEADLYSIGNAL\nAddressSanitizer: nested bug in the same thread, aborting.\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3028024==ERROR: AddressSanitizer: SEGV on unknown address 0x562f0c897830 (pc 0x7f2b8d719a16 bp 0x562f0c897830 sp 0x7ffd81adf2b0 T0)\n==3028024==The signal is caused by a WRITE memory access.\n    #0 0x7f2b8d719a15 in bool __sanitizer::atomic_compare_exchange_strong<__sanitizer::atomic_uint8_t>(__sanitizer::atomic_uint8_t volatile*, __sanitizer::atomic_uint8_t::Type*, __sanitizer::atomic_uint8_t::Type, __sanitizer::memory_order) ../../../../src/libsanitizer/sanitizer_common/sanitizer_atomic_clang.h:79\n    #1 0x7f2b8d719a15 in __asan::Allocator::AtomicallySetQuarantineFlagIfAllocated(__asan::AsanChunk*, void*, __sanitizer::BufferedStackTrace*) ../../../../src/libsanitizer/asan/asan_allocator.cc:552\n    #2 0x7f2b8d719a15 in __asan::Allocator::Deallocate(void*, unsigned long, unsigned long, __sanitizer::BufferedStackTrace*, __asan::AllocType) ../../../../src/libsanitizer/asan/asan_allocator.cc:629\n    #3 0x7f2b8d719a15 in __asan::asan_free(void*, __sanitizer::BufferedStackTrace*, __asan::AllocType) ../../../../src/libsanitizer/asan/asan_allocator.cc:865\n    #4 0x7f2b8d7fe3d8 in __interceptor_free ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:127\n    #5 0x562f0c8933a3 in list_free test_common.h:35\n    #6 0x562f0c893a82 in test_list_update_item_at_pos tests_ref/test_list_update_item_at_pos.c:31\n    #7 0x562f0c891b9c in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #8 0x562f0c8920d1 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #9 0x562f0c892b15 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #10 0x562f0c893c9b in main tests_ref/test_list_update_item_at_pos.c:38\n    #11 0x7f2b8d523082 in __libc_start_main ../csu/libc-start.c:308\n    #12 0x562f0c88780d in _start (/home/moyix/git/codex_study_grading/repos/davinci-001_04/tests_ref/test_list_update_item_at_pos.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV ../../../../src/libsanitizer/sanitizer_common/sanitizer_atomic_clang.h:79 in bool __sanitizer::atomic_compare_exchange_strong<__sanitizer::atomic_uint8_t>(__sanitizer::atomic_uint8_t volatile*, __sanitizer::atomic_uint8_t::Type*, __sanitizer::atomic_uint8_t::Type, __sanitizer::memory_order)\n==3028024==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos_nullhead\n[       OK ] test_list_update_item_at_pos_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos_nullstr": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos_nullstr\n[  FAILED  ] test_list_update_item_at_pos_nullstr\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0 != 0x1\n[   LINE   ] --- tests_ref/test_list_update_item_at_pos_nullstr.c:26: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_update_item_at_pos_nullstr\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n\n=================================================================\n==3028210==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fc885d7e808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x558044880e2f in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x55804488c8b0 in test_list_update_item_at_pos_nullstr tests_ref/test_list_update_item_at_pos_nullstr.c:25\n    #3 0x55804488ab9c in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55804488b0d1 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55804488bb15 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55804488cc8b in main tests_ref/test_list_update_item_at_pos_nullstr.c:38\n    #7 0x7fc885aa3082 in __libc_start_main ../csu/libc-start.c:308\n\nDirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7fc885d073ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x558044880e50 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x55804488c8b0 in test_list_update_item_at_pos_nullstr tests_ref/test_list_update_item_at_pos_nullstr.c:25\n    #3 0x55804488ab9c in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55804488b0d1 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55804488bb15 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55804488cc8b in main tests_ref/test_list_update_item_at_pos_nullstr.c:38\n    #7 0x7fc885aa3082 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: 30 byte(s) leaked in 2 allocation(s).\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos_oob": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos_oob\n[       OK ] test_list_update_item_at_pos_oob\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos\n[  FAILED  ] test_list_remove_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- head->next->next\n[   LINE   ] --- tests_ref/test_list_remove_item_at_pos.c:30: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_remove_item_at_pos\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n\n=================================================================\n==3028498==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd317cd2808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55b180396e24 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x55b1803a28a5 in test_list_remove_item_at_pos tests_ref/test_list_remove_item_at_pos.c:25\n    #3 0x55b1803a0b91 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55b1803a10c6 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55b1803a1b0a in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55b1803a2d6f in main tests_ref/test_list_remove_item_at_pos.c:45\n    #7 0x7fd3179f7082 in __libc_start_main ../csu/libc-start.c:308\n\nDirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd317c5b3ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55b180396e45 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x55b1803a2925 in test_list_remove_item_at_pos tests_ref/test_list_remove_item_at_pos.c:27\n    #3 0x55b1803a0b91 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55b1803a10c6 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55b1803a1b0a in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55b1803a2d6f in main tests_ref/test_list_remove_item_at_pos.c:45\n    #7 0x7fd3179f7082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd317cd2808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55b180396e24 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x55b1803a28e5 in test_list_remove_item_at_pos tests_ref/test_list_remove_item_at_pos.c:26\n    #3 0x55b1803a0b91 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55b1803a10c6 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55b1803a1b0a in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55b1803a2d6f in main tests_ref/test_list_remove_item_at_pos.c:45\n    #7 0x7fd3179f7082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd317c5b3ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55b180396e45 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x55b1803a28e5 in test_list_remove_item_at_pos tests_ref/test_list_remove_item_at_pos.c:26\n    #3 0x55b1803a0b91 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55b1803a10c6 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55b1803a1b0a in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55b1803a2d6f in main tests_ref/test_list_remove_item_at_pos.c:45\n    #7 0x7fd3179f7082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd317c5b3ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55b180396e45 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x55b1803a28a5 in test_list_remove_item_at_pos tests_ref/test_list_remove_item_at_pos.c:25\n    #3 0x55b1803a0b91 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55b1803a10c6 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55b1803a1b0a in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55b1803a2d6f in main tests_ref/test_list_remove_item_at_pos.c:45\n    #7 0x7fd3179f7082 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: 66 byte(s) leaked in 5 allocation(s).\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos_nullhead\n[       OK ] test_list_remove_item_at_pos_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos_oob": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos_oob\n[       OK ] test_list_remove_item_at_pos_oob\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_swap_item_positions": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions\n[  FAILED  ] test_list_swap_item_positions\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- \"item1\" != \"item2\"\n[   LINE   ] --- tests_ref/test_list_swap_item_positions.c:29: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_swap_item_positions\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n\n=================================================================\n==3028833==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7f0b1af47808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55822c03de8b in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x55822c04990c in test_list_swap_item_positions tests_ref/test_list_swap_item_positions.c:25\n    #3 0x55822c047bf8 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55822c04812d in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55822c048b71 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55822c04a127 in main tests_ref/test_list_swap_item_positions.c:47\n    #7 0x7f0b1ac6c082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7f0b1af47808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55822c03de8b in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x55822c04994c in test_list_swap_item_positions tests_ref/test_list_swap_item_positions.c:26\n    #3 0x55822c047bf8 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55822c04812d in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55822c048b71 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55822c04a127 in main tests_ref/test_list_swap_item_positions.c:47\n    #7 0x7f0b1ac6c082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7f0b1af47808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55822c03de8b in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x55822c04998c in test_list_swap_item_positions tests_ref/test_list_swap_item_positions.c:27\n    #3 0x55822c047bf8 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55822c04812d in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55822c048b71 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55822c04a127 in main tests_ref/test_list_swap_item_positions.c:47\n    #7 0x7f0b1ac6c082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7f0b1aed03ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55822c03deac in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x55822c04998c in test_list_swap_item_positions tests_ref/test_list_swap_item_positions.c:27\n    #3 0x55822c047bf8 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55822c04812d in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55822c048b71 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55822c04a127 in main tests_ref/test_list_swap_item_positions.c:47\n    #7 0x7f0b1ac6c082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7f0b1aed03ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55822c03deac in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x55822c04994c in test_list_swap_item_positions tests_ref/test_list_swap_item_positions.c:26\n    #3 0x55822c047bf8 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55822c04812d in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55822c048b71 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55822c04a127 in main tests_ref/test_list_swap_item_positions.c:47\n    #7 0x7f0b1ac6c082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7f0b1aed03ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55822c03deac in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x55822c04990c in test_list_swap_item_positions tests_ref/test_list_swap_item_positions.c:25\n    #3 0x55822c047bf8 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55822c04812d in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55822c048b71 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55822c04a127 in main tests_ref/test_list_swap_item_positions.c:47\n    #7 0x7f0b1ac6c082 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: 90 byte(s) leaked in 6 allocation(s).\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_swap_item_positions_samepos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions_samepos\n",
+            "stderr": "=================================================================\n==3029135==ERROR: AddressSanitizer: heap-use-after-free on address 0x603000000050 at pc 0x56534310b3b8 bp 0x7ffce1ef7600 sp 0x7ffce1ef75f0\nREAD of size 8 at 0x603000000050 thread T0\n    #0 0x56534310b3b7 in list_free test_common.h:34\n    #1 0x56534310ba8f in test_list_swap_item_positions_samepos tests_ref/test_list_swap_item_positions_samepos.c:31\n    #2 0x565343109bf8 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x56534310a12d in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x56534310ab71 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x56534310bca8 in main tests_ref/test_list_swap_item_positions_samepos.c:38\n    #6 0x7fe32c1c8082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x5653430ff80d in _start (/home/moyix/git/codex_study_grading/repos/davinci-001_04/tests_ref/test_list_swap_item_positions_samepos.bin+0x580d)\n\n0x603000000050 is located 16 bytes inside of 24-byte region [0x603000000040,0x603000000058)\nfreed by thread T0 here:\n    #0 0x7fe32c4a340f in __interceptor_free ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:122\n    #1 0x56534310b412 in list_free test_common.h:36\n    #2 0x56534310ba8f in test_list_swap_item_positions_samepos tests_ref/test_list_swap_item_positions_samepos.c:31\n    #3 0x565343109bf8 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x56534310a12d in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x56534310ab71 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x56534310bca8 in main tests_ref/test_list_swap_item_positions_samepos.c:38\n    #7 0x7fe32c1c8082 in __libc_start_main ../csu/libc-start.c:308\n\npreviously allocated by thread T0 here:\n    #0 0x7fe32c4a3808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x5653430ffe8b in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x56534310b94c in test_list_swap_item_positions_samepos tests_ref/test_list_swap_item_positions_samepos.c:26\n    #3 0x565343109bf8 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x56534310a12d in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x56534310ab71 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x56534310bca8 in main tests_ref/test_list_swap_item_positions_samepos.c:38\n    #7 0x7fe32c1c8082 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: heap-use-after-free test_common.h:34 in list_free\nShadow bytes around the buggy address:\n  0x0c067fff7fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c067fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c067fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c067fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c067fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n=>0x0c067fff8000: fa fa fd fd fd fa fa fa fd fd[fd]fa fa fa fa fa\n  0x0c067fff8010: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c067fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c067fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c067fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c067fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n  Shadow gap:              cc\n==3029135==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_swap_item_positions_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions_nullhead\n[       OK ] test_list_swap_item_positions_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_swap_item_positions_oob": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions_oob\n[       OK ] test_list_swap_item_positions_oob\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position\n[       OK ] test_list_find_highest_price_item_position\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position_nullhead\n[       OK ] test_list_find_highest_price_item_position_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position_nullpos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position_nullpos\n[       OK ] test_list_find_highest_price_item_position_nullpos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_cost_sum": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum\n[       OK ] test_list_cost_sum\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_cost_sum_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum_nullhead\n[       OK ] test_list_cost_sum_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_cost_sum_nulltotal": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum_nulltotal\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3029855==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x560cdce0293c bp 0x7ffde7c1dcc0 sp 0x7ffde7c1dcc0 T0)\n==3029855==The signal is caused by a WRITE memory access.\n==3029855==Hint: address points to the zero page.\n    #0 0x560cdce0293b in list_cost_sum parts/gen_list_cost_sum.c:34\n    #1 0x560cdce0e96b in test_list_cost_sum_nulltotal tests_ref/test_list_cost_sum_nulltotal.c:28\n    #2 0x560cdce0cb86 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x560cdce0d0bb in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x560cdce0daff in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x560cdce0ebaa in main tests_ref/test_list_cost_sum_nulltotal.c:36\n    #6 0x7f05e5b93082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x560cdce0280d in _start (/home/moyix/git/codex_study_grading/repos/davinci-001_04/tests_ref/test_list_cost_sum_nulltotal.bin+0x680d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_cost_sum.c:34 in list_cost_sum\n==3029855==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_save": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save\n[  FAILED  ] test_list_save\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- \"item1,1.000000,1\n\" != \"item1,1.00,1\n\"\n[   LINE   ] --- tests_ref/test_list_save.c:40: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_save\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n\n=================================================================\n==3030082==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd3b472f808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x557efa32fe88 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x557efa33ba57 in test_list_save tests_ref/test_list_save.c:28\n    #3 0x557efa339bf5 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x557efa33a12a in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x557efa33ab6e in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x557efa33c092 in main tests_ref/test_list_save.c:64\n    #7 0x7fd3b4454082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 512 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd3b46b83ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x557efa32fea9 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x557efa33bb20 in test_list_save tests_ref/test_list_save.c:31\n    #3 0x557efa339bf5 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x557efa33a12a in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x557efa33ab6e in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x557efa33c092 in main tests_ref/test_list_save.c:64\n    #7 0x7fd3b4454082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd3b472f808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x557efa32fe88 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x557efa33bb20 in test_list_save tests_ref/test_list_save.c:31\n    #3 0x557efa339bf5 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x557efa33a12a in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x557efa33ab6e in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x557efa33c092 in main tests_ref/test_list_save.c:64\n    #7 0x7fd3b4454082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd3b472f808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x557efa32fe88 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x557efa33ba9a in test_list_save tests_ref/test_list_save.c:29\n    #3 0x557efa339bf5 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x557efa33a12a in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x557efa33ab6e in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x557efa33c092 in main tests_ref/test_list_save.c:64\n    #7 0x7fd3b4454082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd3b472f808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x557efa32fe88 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x557efa33badd in test_list_save tests_ref/test_list_save.c:30\n    #3 0x557efa339bf5 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x557efa33a12a in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x557efa33ab6e in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x557efa33c092 in main tests_ref/test_list_save.c:64\n    #7 0x7fd3b4454082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 8 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd3b46b83ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x557efa32fea9 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x557efa33badd in test_list_save tests_ref/test_list_save.c:30\n    #3 0x557efa339bf5 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x557efa33a12a in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x557efa33ab6e in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x557efa33c092 in main tests_ref/test_list_save.c:64\n    #7 0x7fd3b4454082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd3b46b83ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x557efa32fea9 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x557efa33ba9a in test_list_save tests_ref/test_list_save.c:29\n    #3 0x557efa339bf5 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x557efa33a12a in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x557efa33ab6e in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x557efa33c092 in main tests_ref/test_list_save.c:64\n    #7 0x7fd3b4454082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7fd3b46b83ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x557efa32fea9 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x557efa33ba57 in test_list_save tests_ref/test_list_save.c:28\n    #3 0x557efa339bf5 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x557efa33a12a in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x557efa33ab6e in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x557efa33c092 in main tests_ref/test_list_save.c:64\n    #7 0x7fd3b4454082 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: 628 byte(s) leaked in 8 allocation(s).\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_save_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save_nullhead\n[       OK ] test_list_save_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_save_nullfilename": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save_nullfilename\n[       OK ] test_list_save_nullfilename\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_save_badfile": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save_badfile\n[       OK ] test_list_save_badfile\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load\n[  FAILED  ] test_list_load\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- \"\\xd0q\\xff=\\xfe\u007f\" != \"item1\"\n[   LINE   ] --- tests_ref/test_list_load.c:33: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_load\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n\n=================================================================\n==3030494==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7f14dadf7808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x5631c83eda4c in list_load parts/gen_list_load.c:44\n    #2 0x5631c83f9ab9 in test_list_load tests_ref/test_list_load.c:27\n    #3 0x5631c83f7d24 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x5631c83f8259 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x5631c83f8c9d in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x5631c83fa5ea in main tests_ref/test_list_load.c:53\n    #7 0x7f14dab1c082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 48 byte(s) in 2 object(s) allocated from:\n    #0 0x7f14dadf7808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x5631c83eda4c in list_load parts/gen_list_load.c:44\n    #2 0x5631c83f9ab9 in test_list_load tests_ref/test_list_load.c:27\n    #3 0x5631c83f7d24 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x5631c83f8259 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x5631c83f8c9d in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x5631c83fa5ea in main tests_ref/test_list_load.c:53\n    #7 0x7f14dab1c082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7f14dadf7808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x5631c83edfb7 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:114\n    #2 0x5631c83f9a88 in test_list_load tests_ref/test_list_load.c:26\n    #3 0x5631c83f7d24 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x5631c83f8259 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x5631c83f8c9d in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x5631c83fa5ea in main tests_ref/test_list_load.c:53\n    #7 0x7f14dab1c082 in __libc_start_main ../csu/libc-start.c:308\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7f14dad803ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x5631c83edfd8 in ref_list_add_item_at_pos /home/moyix/git/codex_study_grading/repos/davinci-001_04/reflist.c:118\n    #2 0x5631c83f9a88 in test_list_load tests_ref/test_list_load.c:26\n    #3 0x5631c83f7d24 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x5631c83f8259 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x5631c83f8c9d in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x5631c83fa5ea in main tests_ref/test_list_load.c:53\n    #7 0x7f14dab1c082 in __libc_start_main ../csu/libc-start.c:308\n\nSUMMARY: AddressSanitizer: 102 byte(s) leaked in 5 allocation(s).\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_load_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_nullhead\n[       OK ] test_list_load_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load_nullfilename": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_nullfilename\n[       OK ] test_list_load_nullfilename\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load_longitem": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_longitem\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3030922==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f9ed1905c3b bp 0x7ffefc655160 sp 0x7ffefc654c30 T0)\n==3030922==The signal is caused by a READ memory access.\n==3030922==Hint: address points to the zero page.\n    #0 0x7f9ed1905c3a in __GI_____strtod_l_internal /build/glibc-SzIz7B/glibc-2.31/stdlib/strtod_l.c:611\n    #1 0x55c01614fa29 in list_load parts/gen_list_load.c:41\n    #2 0x55c01615bb1f in test_list_load_longitem tests_ref/test_list_load_longitem.c:29\n    #3 0x55c016159d44 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55c01615a279 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55c01615acbd in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55c01615bf3c in main tests_ref/test_list_load_longitem.c:40\n    #7 0x7f9ed18dd082 in __libc_start_main ../csu/libc-start.c:308\n    #8 0x55c01614f8ad in _start (/home/moyix/git/codex_study_grading/repos/davinci-001_04/tests_ref/test_list_load_longitem.bin+0x68ad)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV /build/glibc-SzIz7B/glibc-2.31/stdlib/strtod_l.c:611 in __GI_____strtod_l_internal\n==3030922==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_load_badparse": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_badparse\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3031188==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f1747f36c3b bp 0x7fffdbef8640 sp 0x7fffdbef8110 T0)\n==3031188==The signal is caused by a READ memory access.\n==3031188==Hint: address points to the zero page.\n    #0 0x7f1747f36c3a in __GI_____strtod_l_internal /build/glibc-SzIz7B/glibc-2.31/stdlib/strtod_l.c:611\n    #1 0x559b2dfe7a09 in list_load parts/gen_list_load.c:41\n    #2 0x559b2dff3ab9 in test_list_load_badparse tests_ref/test_list_load_badparse.c:27\n    #3 0x559b2dff1d24 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x559b2dff2259 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x559b2dff2c9d in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x559b2dff3eca in main tests_ref/test_list_load_badparse.c:39\n    #7 0x7f1747f0e082 in __libc_start_main ../csu/libc-start.c:308\n    #8 0x559b2dfe788d in _start (/home/moyix/git/codex_study_grading/repos/davinci-001_04/tests_ref/test_list_load_badparse.bin+0x688d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV /build/glibc-SzIz7B/glibc-2.31/stdlib/strtod_l.c:611 in __GI_____strtod_l_internal\n==3031188==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_load_badfile": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_badfile\n[       OK ] test_list_load_badfile\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load_missingfile": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load_missingfile\n[       OK ] test_list_load_missingfile\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_deduplicate": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3031489==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000010 (pc 0x55f753c97950 bp 0x7fff8961f450 sp 0x7fff8961f420 T0)\n==3031489==The signal is caused by a WRITE memory access.\n==3031489==Hint: address points to the zero page.\n    #0 0x55f753c9794f in list_deduplicate parts/gen_list_deduplicate.c:37\n    #1 0x55f753ca3969 in test_list_deduplicate tests_ref/test_list_deduplicate.c:27\n    #2 0x55f753ca1bee in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55f753ca2123 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55f753ca2b67 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55f753ca3d74 in main tests_ref/test_list_deduplicate.c:39\n    #6 0x7f38832af082 in __libc_start_main ../csu/libc-start.c:308\n    #7 0x55f753c9780d in _start (/home/moyix/git/codex_study_grading/repos/davinci-001_04/tests_ref/test_list_deduplicate.bin+0x580d)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_deduplicate.c:37 in list_deduplicate\n==3031489==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_deduplicate_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate_nullhead\n[       OK ] test_list_deduplicate_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_deduplicate_single": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate_single\n[       OK ] test_list_deduplicate_single\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_deduplicate_nodups": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate_nodups\n[       OK ] test_list_deduplicate_nodups\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        }
+    },
+    "passed": 25,
+    "total": 45,
+    "passed_functional": 12,
+    "total_functional": 26
+}

@@ -1,0 +1,92 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos\n[       OK ] test_list_add_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_item_to_string": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string\n[       OK ] test_list_item_to_string\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_print": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n[       OK ] test_list_print\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos\n[       OK ] test_list_update_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos\n[       OK ] test_list_remove_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_swap_item_positions": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions\n",
+            "stderr": "=================================================================\n==3831012==ERROR: AddressSanitizer: heap-use-after-free on address 0x602000000030 at pc 0x7fb4869ba3ad bp 0x7ffff67e5930 sp 0x7ffff67e50d8\nREAD of size 2 at 0x602000000030 thread T0\n    #0 0x7fb4869ba3ac in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:443\n    #1 0x557d59dab1ed in ref_list_update_item_at_pos /home/gustavo/git/codex_study_grading/repos/9702f54c-200b-41f5-9fc4-971af3d86785/reflist.c:164\n    #2 0x557d59daa9c1 in list_swap_item_positions parts/gen_list_swap_item_positions.c:57\n    #3 0x557d59db69ad in test_list_swap_item_positions tests_orig/test_list_swap_item_positions.c:25\n    #4 0x557d59db4c65 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #5 0x557d59db51a5 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #6 0x557d59db5bd3 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #7 0x557d59db6c99 in main tests_orig/test_list_swap_item_positions.c:34\n    #8 0x7fb486725fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #9 0x7fb48672607c in __libc_start_main_impl ../csu/libc-start.c:409\n    #10 0x557d59daa804 in _start (/home/gustavo/git/codex_study_grading/repos/9702f54c-200b-41f5-9fc4-971af3d86785/tests_orig/test_list_swap_item_positions.bin+0x5804)\n\n0x602000000030 is located 0 bytes inside of 6-byte region [0x602000000030,0x602000000036)\nfreed by thread T0 here:\n    #0 0x7fb486a3140f in __interceptor_free ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:122\n    #1 0x557d59dab1e1 in ref_list_update_item_at_pos /home/gustavo/git/codex_study_grading/repos/9702f54c-200b-41f5-9fc4-971af3d86785/reflist.c:162\n    #2 0x557d59daa9a6 in list_swap_item_positions parts/gen_list_swap_item_positions.c:56\n    #3 0x557d59db69ad in test_list_swap_item_positions tests_orig/test_list_swap_item_positions.c:25\n    #4 0x557d59db4c65 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #5 0x557d59db51a5 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #6 0x557d59db5bd3 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #7 0x557d59db6c99 in main tests_orig/test_list_swap_item_positions.c:34\n    #8 0x7fb486725fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\npreviously allocated by thread T0 here:\n    #0 0x7fb4869ba3ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x557d59daaec0 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/9702f54c-200b-41f5-9fc4-971af3d86785/reflist.c:118\n    #2 0x557d59db697c in test_list_swap_item_positions tests_orig/test_list_swap_item_positions.c:24\n    #3 0x557d59db4c65 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x557d59db51a5 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x557d59db5bd3 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x557d59db6c99 in main tests_orig/test_list_swap_item_positions.c:34\n    #7 0x7fb486725fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: heap-use-after-free ../../../../src/libsanitizer/asan/asan_interceptors.cc:443 in __interceptor_strdup\nShadow bytes around the buggy address:\n  0x0c047fff7fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n=>0x0c047fff8000: fa fa fd fa fa fa[fd]fa fa fa 06 fa fa fa fa fa\n  0x0c047fff8010: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n  Shadow gap:              cc\n==3831012==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position\n[       OK ] test_list_find_highest_price_item_position\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_cost_sum": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum\n[       OK ] test_list_cost_sum\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_save": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save\n[       OK ] test_list_save\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load\n[       OK ] test_list_load\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_deduplicate": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate\n[  FAILED  ] test_list_deduplicate\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0x1 != 0xb\n[   LINE   ] --- tests_orig/test_list_deduplicate.c:28: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_deduplicate\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        }
+    },
+    "passed": 9,
+    "total": 12,
+    "passed_functional": 9,
+    "total_functional": 12
+}

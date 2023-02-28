@@ -1,0 +1,14 @@
+{
+  "list_init": "unimplemented",
+  "list_item_to_string": "compile_error",
+  "list_print": "compile_error",
+  "list_add_item_at_pos": "compile_error",
+  "list_update_item_at_pos": "compile_error",
+  "list_remove_item_at_pos": "compile_error",
+  "list_swap_item_positions": "compile_error",
+  "list_find_highest_price_item_position": "compile_error",
+  "list_cost_sum": "compile_error",
+  "list_save": "ok",
+  "list_load": "unimplemented",
+  "list_deduplicate": "unimplemented"
+}

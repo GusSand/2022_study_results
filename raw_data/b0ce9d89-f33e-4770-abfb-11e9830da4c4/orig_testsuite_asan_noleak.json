@@ -1,0 +1,92 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos\n[  FAILED  ] test_list_add_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0x1 != 0\n[   LINE   ] --- tests_orig/test_list_add_item_at_pos.c:23: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_add_item_at_pos\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_item_to_string": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3822198==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000001 (pc 0x7fbc6f938616 bp 0x7ffc9e9eb670 sp 0x7ffc9e9ead98 T0)\n==3822198==The signal is caused by a READ memory access.\n==3822198==Hint: address points to the zero page.\n    #0 0x7fbc6f938615 in __sanitizer::internal_strlen(char const*) ../../../../src/libsanitizer/sanitizer_common/sanitizer_libc.cc:164\n    #1 0x7fbc6f8ae84a in printf_common ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors_format.inc:489\n    #2 0x7fbc6f8b0762 in __interceptor_vsprintf ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:1627\n    #3 0x7fbc6f8b0bde in __interceptor_sprintf ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:1670\n    #4 0x5623d58c9919 in list_item_to_string parts/gen_list_item_to_string.c:33\n    #5 0x5623d58d5951 in test_list_item_to_string tests_orig/test_list_item_to_string.c:25\n    #6 0x5623d58d3bfb in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #7 0x5623d58d413b in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #8 0x5623d58d4b69 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #9 0x5623d58d5bba in main tests_orig/test_list_item_to_string.c:34\n    #10 0x7fbc6f613fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #11 0x7fbc6f61407c in __libc_start_main_impl ../csu/libc-start.c:409\n    #12 0x5623d58c9824 in _start (/home/gustavo/git/codex_study_grading/repos/b0ce9d89-f33e-4770-abfb-11e9830da4c4/tests_orig/test_list_item_to_string.bin+0x6824)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV ../../../../src/libsanitizer/sanitizer_common/sanitizer_libc.cc:164 in __sanitizer::internal_strlen(char const*)\n==3822198==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_print": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3822547==ERROR: AddressSanitizer: SEGV on unknown address 0x006165203030 (pc 0x7f2f8176c89c bp 0x7fff143e46b0 sp 0x7fff143e3e10 T0)\n==3822547==The signal is caused by a READ memory access.\n    #0 0x7f2f8176c89b in __interceptor_strcmp ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:420\n    #1 0x5615ebd4e041 in _function_called cmocka/cmocka.c:1039\n    #2 0x5615ebd55534 in test_printf test_common.h:55\n    #3 0x5615ebd49905 in list_print parts/gen_list_print.c:41\n    #4 0x5615ebd5595a in test_list_print tests_orig/test_list_print.c:27\n    #5 0x5615ebd53b9a in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #6 0x5615ebd540da in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #7 0x5615ebd54b08 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #8 0x5615ebd55b9f in main tests_orig/test_list_print.c:40\n    #9 0x7f2f81497fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #10 0x7f2f8149807c in __libc_start_main_impl ../csu/libc-start.c:409\n    #11 0x5615ebd49804 in _start (/home/gustavo/git/codex_study_grading/repos/b0ce9d89-f33e-4770-abfb-11e9830da4c4/tests_orig/test_list_print.bin+0x6804)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:420 in __interceptor_strcmp\n==3822547==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos\n[  FAILED  ] test_list_update_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0x1 != 0\n[   LINE   ] --- tests_orig/test_list_update_item_at_pos.c:25: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_update_item_at_pos\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_save": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        }
+    },
+    "passed": 0,
+    "total": 12,
+    "passed_functional": 0,
+    "total_functional": 12
+}

@@ -1,0 +1,323 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_init_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos_nullitem": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos_oob": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_item_to_string": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_item_to_string_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_item_to_string_nullstr": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_item_to_string_longstr": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_print": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n",
+            "stderr": "=================================================================\n==3810047==ERROR: AddressSanitizer: global-buffer-overflow on address 0x5648f79bce40 at pc 0x7f722ee3a1c5 bp 0x7ffdee3c88b0 sp 0x7ffdee3c8058\nWRITE of size 26 at 0x5648f79bce40 thread T0\n    #0 0x7f722ee3a1c4 in __interceptor_strcat ../../../../src/libsanitizer/asan/asan_interceptors.cc:384\n    #1 0x5648f79b154f in test_printf test_common.h:57\n    #2 0x5648f79a5912 in list_print parts/gen_list_print.c:40\n    #3 0x5648f79b195f in test_list_print tests_ref/test_list_print.c:29\n    #4 0x5648f79afb9f in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #5 0x5648f79b00df in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #6 0x5648f79b0b0d in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #7 0x5648f79b1bcc in main tests_ref/test_list_print.c:43\n    #8 0x7f722eb8dfcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #9 0x7f722eb8e07c in __libc_start_main_impl ../csu/libc-start.c:409\n    #10 0x5648f79a5804 in _start (/home/gustavo/git/codex_study_grading/repos/a2ab1ed3-1881-42af-b18d-1197d0ea95ae/tests_ref/test_list_print.bin+0x6804)\n\n0x5648f79bce40 is located 0 bytes to the right of global variable 'big_buffer' defined in './test_common.h:42:13' (0x5648f79bca40) of size 1024\nSUMMARY: AddressSanitizer: global-buffer-overflow ../../../../src/libsanitizer/asan/asan_interceptors.cc:384 in __interceptor_strcat\nShadow bytes around the buggy address:\n  0x0ac99ef2f970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac99ef2f980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac99ef2f990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac99ef2f9a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac99ef2f9b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n=>0x0ac99ef2f9c0: 00 00 00 00 00 00 00 00[f9]f9 f9 f9 00 00 00 00\n  0x0ac99ef2f9d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac99ef2f9e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac99ef2f9f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac99ef2fa00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac99ef2fa10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n  Shadow gap:              cc\n==3810047==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_print_nullhead": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print_nullhead\n[  FAILED  ] test_list_print_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0 != 0x1\n[   LINE   ] --- tests_ref/test_list_print_nullhead.c:23: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_print_nullhead\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_print_longitem": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print_longitem\n",
+            "stderr": "=================================================================\n==3810640==ERROR: AddressSanitizer: global-buffer-overflow on address 0x560d65354d40 at pc 0x7f6cce7fa1c5 bp 0x7ffc1f9d2ff0 sp 0x7ffc1f9d2798\nWRITE of size 256 at 0x560d65354d40 thread T0\n    #0 0x7f6cce7fa1c4 in __interceptor_strcat ../../../../src/libsanitizer/asan/asan_interceptors.cc:384\n    #1 0x560d6534956f in test_printf test_common.h:57\n    #2 0x560d6533d932 in list_print parts/gen_list_print.c:40\n    #3 0x560d6534998a in test_list_print_longitem tests_ref/test_list_print_longitem.c:30\n    #4 0x560d65347bbf in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #5 0x560d653480ff in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #6 0x560d65348b2d in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #7 0x560d65349c2e in main tests_ref/test_list_print_longitem.c:39\n    #8 0x7f6cce54dfcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #9 0x7f6cce54e07c in __libc_start_main_impl ../csu/libc-start.c:409\n    #10 0x560d6533d824 in _start (/home/gustavo/git/codex_study_grading/repos/a2ab1ed3-1881-42af-b18d-1197d0ea95ae/tests_ref/test_list_print_longitem.bin+0x5824)\n\n0x560d65354d40 is located 0 bytes to the right of global variable 'big_buffer' defined in './test_common.h:42:13' (0x560d65354940) of size 1024\nSUMMARY: AddressSanitizer: global-buffer-overflow ../../../../src/libsanitizer/asan/asan_interceptors.cc:384 in __interceptor_strcat\nShadow bytes around the buggy address:\n  0x0ac22ca62950: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac22ca62960: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac22ca62970: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac22ca62980: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac22ca62990: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n=>0x0ac22ca629a0: 00 00 00 00 00 00 00 00[f9]f9 f9 f9 00 00 00 00\n  0x0ac22ca629b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac22ca629c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac22ca629d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac22ca629e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac22ca629f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n  Shadow gap:              cc\n==3810640==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_update_item_at_pos_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_update_item_at_pos_nullstr": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_update_item_at_pos_oob": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_remove_item_at_pos_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_remove_item_at_pos_oob": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions_samepos": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions_oob": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_find_highest_price_item_position_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_find_highest_price_item_position_nullpos": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum_nulltotal": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_save": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_save_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_save_nullfilename": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_save_badfile": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_nullfilename": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_longitem": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_badparse": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_badfile": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_missingfile": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate_single": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate_nodups": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        }
+    },
+    "passed": 0,
+    "total": 45,
+    "passed_functional": 0,
+    "total_functional": 26
+}

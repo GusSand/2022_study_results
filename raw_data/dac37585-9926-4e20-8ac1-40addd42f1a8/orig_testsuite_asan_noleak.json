@@ -1,0 +1,92 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_init\n[       OK ] test_list_init\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos\n[       OK ] test_list_add_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_item_to_string": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string\n[       OK ] test_list_item_to_string\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_print": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n",
+            "stderr": "=================================================================\n==3826812==ERROR: AddressSanitizer: heap-use-after-free on address 0x60b0000000f0 at pc 0x7fa49cdb6a8d bp 0x7ffd3c559c10 sp 0x7ffd3c5593a0\nWRITE of size 22 at 0x60b0000000f0 thread T0\n    #0 0x7fa49cdb6a8c in __interceptor_vsnprintf ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:1608\n    #1 0x7fa49cdb6f2e in __interceptor_snprintf ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:1679\n    #2 0x5591d5f88aa6 in ref_list_item_to_string /home/gustavo/git/codex_study_grading/repos/dac37585-9926-4e20-8ac1-40addd42f1a8/reflist.c:44\n    #3 0x5591d5f88918 in list_print parts/gen_list_print.c:46\n    #4 0x5591d5f94997 in test_list_print tests_orig/test_list_print.c:27\n    #5 0x5591d5f92bd7 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #6 0x5591d5f93117 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #7 0x5591d5f93b45 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #8 0x5591d5f94bdc in main tests_orig/test_list_print.c:40\n    #9 0x7fa49cb18fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #10 0x7fa49cb1907c in __libc_start_main_impl ../csu/libc-start.c:409\n    #11 0x5591d5f88804 in _start (/home/gustavo/git/codex_study_grading/repos/dac37585-9926-4e20-8ac1-40addd42f1a8/tests_orig/test_list_print.bin+0x6804)\n\n0x60b0000000f0 is located 0 bytes inside of 100-byte region [0x60b0000000f0,0x60b000000154)\nfreed by thread T0 here:\n==3826812==AddressSanitizer CHECK failed: ../../../../src/libsanitizer/asan/asan_descriptions.cc:176 \"((res.trace)) != (0)\" (0x0, 0x0)\n    #0 0x7fa49ce2e8be in AsanCheckFailed ../../../../src/libsanitizer/asan/asan_rtl.cc:72\n    #1 0x7fa49ce4cefe in __sanitizer::CheckFailed(char const*, int, char const*, unsigned long long, unsigned long long) ../../../../src/libsanitizer/sanitizer_common/sanitizer_termination.cc:77\n    #2 0x7fa49cd444fc in GetStackTraceFromId ../../../../src/libsanitizer/asan/asan_descriptions.cc:176\n    #3 0x7fa49cd4608e in __asan::HeapAddressDescription::Print() const ../../../../src/libsanitizer/asan/asan_descriptions.cc:424\n    #4 0x7fa49cd49b83 in __asan::AddressDescription::Print(char const*) const ../../../../src/libsanitizer/asan/asan_descriptions.h:233\n    #5 0x7fa49cd49b83 in __asan::ErrorGeneric::Print() ../../../../src/libsanitizer/asan/asan_errors.cc:576\n    #6 0x7fa49ce2e62c in __asan::ErrorDescription::Print() ../../../../src/libsanitizer/asan/asan_errors.h:420\n    #7 0x7fa49ce2e62c in __asan::ScopedInErrorReport::~ScopedInErrorReport() ../../../../src/libsanitizer/asan/asan_report.cc:140\n    #8 0x7fa49ce2dfa2 in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ../../../../src/libsanitizer/asan/asan_report.cc:458\n    #9 0x7fa49cdb6aae in __interceptor_vsnprintf ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:1608\n    #10 0x7fa49cdb6f2e in __interceptor_snprintf ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:1679\n    #11 0x5591d5f88aa6 in ref_list_item_to_string /home/gustavo/git/codex_study_grading/repos/dac37585-9926-4e20-8ac1-40addd42f1a8/reflist.c:44\n    #12 0x5591d5f88918 in list_print parts/gen_list_print.c:46\n    #13 0x5591d5f94997 in test_list_print tests_orig/test_list_print.c:27\n    #14 0x5591d5f92bd7 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #15 0x5591d5f93117 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #16 0x5591d5f93b45 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #17 0x5591d5f94bdc in main tests_orig/test_list_print.c:40\n    #18 0x7fa49cb18fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #19 0x7fa49cb1907c in __libc_start_main_impl ../csu/libc-start.c:409\n    #20 0x5591d5f88804 in _start (/home/gustavo/git/codex_study_grading/repos/dac37585-9926-4e20-8ac1-40addd42f1a8/tests_orig/test_list_print.bin+0x6804)\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos\n[       OK ] test_list_update_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos\n[       OK ] test_list_remove_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_swap_item_positions": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions\n[  FAILED  ] test_list_swap_item_positions\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- \"item2\" != \"item1\"\n[   LINE   ] --- tests_orig/test_list_swap_item_positions.c:27: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_swap_item_positions\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_save": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        }
+    },
+    "passed": 5,
+    "total": 12,
+    "passed_functional": 5,
+    "total_functional": 12
+}

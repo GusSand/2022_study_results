@@ -1,0 +1,323 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_init_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos_nullitem": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos_oob": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_item_to_string": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_item_to_string_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_item_to_string_nullstr": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_item_to_string_longstr": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_print": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_print_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_print_longitem": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_update_item_at_pos_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_update_item_at_pos_nullstr": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_update_item_at_pos_oob": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_remove_item_at_pos_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_remove_item_at_pos_oob": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions_samepos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions_oob": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_find_highest_price_item_position_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_find_highest_price_item_position_nullpos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum_nullhead": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum_nulltotal": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_save": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save\n[  FAILED  ] test_list_save\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0x1 != 0\n[   LINE   ] --- tests_ref/test_list_save.c:32: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_save\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n\n=================================================================\n==3808545==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fbf9552c808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55d96002cdd4 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/32999001-1b8b-40d0-8776-0dc7fbd264ac/reflist.c:114\n    #2 0x55d96003895f in test_list_save tests_ref/test_list_save.c:28\n    #3 0x55d960036b9a in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55d9600370da in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55d960037b08 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55d960038f6d in main tests_ref/test_list_save.c:64\n    #7 0x7fbf95220fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nIndirect leak of 512 byte(s) in 1 object(s) allocated from:\n    #0 0x7fbf954b53ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55d96002cdf5 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/32999001-1b8b-40d0-8776-0dc7fbd264ac/reflist.c:118\n    #2 0x55d960038a28 in test_list_save tests_ref/test_list_save.c:31\n    #3 0x55d960036b9a in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55d9600370da in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55d960037b08 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55d960038f6d in main tests_ref/test_list_save.c:64\n    #7 0x7fbf95220fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fbf9552c808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55d96002cdd4 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/32999001-1b8b-40d0-8776-0dc7fbd264ac/reflist.c:114\n    #2 0x55d960038a28 in test_list_save tests_ref/test_list_save.c:31\n    #3 0x55d960036b9a in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55d9600370da in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55d960037b08 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55d960038f6d in main tests_ref/test_list_save.c:64\n    #7 0x7fbf95220fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fbf9552c808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55d96002cdd4 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/32999001-1b8b-40d0-8776-0dc7fbd264ac/reflist.c:114\n    #2 0x55d9600389a2 in test_list_save tests_ref/test_list_save.c:29\n    #3 0x55d960036b9a in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55d9600370da in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55d960037b08 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55d960038f6d in main tests_ref/test_list_save.c:64\n    #7 0x7fbf95220fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nIndirect leak of 24 byte(s) in 1 object(s) allocated from:\n    #0 0x7fbf9552c808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55d96002cdd4 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/32999001-1b8b-40d0-8776-0dc7fbd264ac/reflist.c:114\n    #2 0x55d9600389e5 in test_list_save tests_ref/test_list_save.c:30\n    #3 0x55d960036b9a in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55d9600370da in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55d960037b08 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55d960038f6d in main tests_ref/test_list_save.c:64\n    #7 0x7fbf95220fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nIndirect leak of 8 byte(s) in 1 object(s) allocated from:\n    #0 0x7fbf954b53ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55d96002cdf5 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/32999001-1b8b-40d0-8776-0dc7fbd264ac/reflist.c:118\n    #2 0x55d9600389e5 in test_list_save tests_ref/test_list_save.c:30\n    #3 0x55d960036b9a in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55d9600370da in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55d960037b08 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55d960038f6d in main tests_ref/test_list_save.c:64\n    #7 0x7fbf95220fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7fbf954b53ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55d96002cdf5 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/32999001-1b8b-40d0-8776-0dc7fbd264ac/reflist.c:118\n    #2 0x55d9600389a2 in test_list_save tests_ref/test_list_save.c:29\n    #3 0x55d960036b9a in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55d9600370da in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55d960037b08 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55d960038f6d in main tests_ref/test_list_save.c:64\n    #7 0x7fbf95220fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nIndirect leak of 6 byte(s) in 1 object(s) allocated from:\n    #0 0x7fbf954b53ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55d96002cdf5 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/32999001-1b8b-40d0-8776-0dc7fbd264ac/reflist.c:118\n    #2 0x55d96003895f in test_list_save tests_ref/test_list_save.c:28\n    #3 0x55d960036b9a in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55d9600370da in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55d960037b08 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55d960038f6d in main tests_ref/test_list_save.c:64\n    #7 0x7fbf95220fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: 628 byte(s) leaked in 8 allocation(s).\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_save_nullhead": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save_nullhead\n[       OK ] test_list_save_nullhead\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_save_nullfilename": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save_nullfilename\n[       OK ] test_list_save_nullfilename\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_save_badfile": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save_badfile\n[       OK ] test_list_save_badfile\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_nullfilename": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_longitem": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_badparse": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_badfile": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load_missingfile": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate_nullhead": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate_single": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate_nodups": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        }
+    },
+    "passed": 3,
+    "total": 45,
+    "passed_functional": 1,
+    "total_functional": 26
+}

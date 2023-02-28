@@ -1,0 +1,92 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos\n[       OK ] test_list_add_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_item_to_string": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string\n[       OK ] test_list_item_to_string\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_print": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n[       OK ] test_list_print\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos\n[       OK ] test_list_update_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos\n[       OK ] test_list_remove_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_swap_item_positions": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions\n[       OK ] test_list_swap_item_positions\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position\n[       OK ] test_list_find_highest_price_item_position\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_cost_sum": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum\n[       OK ] test_list_cost_sum\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_save": {
+            "return_code": 0,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_save\n[       OK ] test_list_save\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  PASSED  ] 1 test(s).\n\nSummary: [#]\n\n",
+            "passed": true,
+            "skipped": false
+        },
+        "test_list_load": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_load\n",
+            "stderr": "=================================================================\n==3832654==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000091 at pc 0x7fa5df28a3ed bp 0x7fff156a42b0 sp 0x7fff156a3a58\nREAD of size 2 at 0x602000000091 thread T0\n    #0 0x7fa5df28a3ec in __interceptor_atoi ../../../../src/libsanitizer/asan/asan_interceptors.cc:512\n    #1 0x55833eac8b9e in list_load parts/gen_list_load.c:90\n    #2 0x55833ead4b2c in test_list_load tests_orig/test_list_load.c:23\n    #3 0x55833ead2e7d in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55833ead33bd in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55833ead3deb in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55833ead5343 in main tests_orig/test_list_load.c:44\n    #7 0x7fa5df03afcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #8 0x7fa5df03b07c in __libc_start_main_impl ../csu/libc-start.c:409\n    #9 0x55833eac8864 in _start (/home/gustavo/git/codex_study_grading/repos/3533dacf-349b-4581-bc32-6b9f015199c1/tests_orig/test_list_load.bin+0x6864)\n\n0x602000000091 is located 0 bytes to the right of 1-byte region [0x602000000090,0x602000000091)\nallocated by thread T0 here:\n    #0 0x7fa5df346808 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:144\n    #1 0x55833eac894b in memRealloc parts/gen_list_load.c:26\n    #2 0x55833eac8b1c in list_load parts/gen_list_load.c:78\n    #3 0x55833ead4b2c in test_list_load tests_orig/test_list_load.c:23\n    #4 0x55833ead2e7d in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #5 0x55833ead33bd in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #6 0x55833ead3deb in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #7 0x55833ead5343 in main tests_orig/test_list_load.c:44\n    #8 0x7fa5df03afcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: heap-buffer-overflow ../../../../src/libsanitizer/asan/asan_interceptors.cc:512 in __interceptor_atoi\nShadow bytes around the buggy address:\n  0x0c047fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff8000: fa fa 05 fa fa fa 00 02 fa fa 05 fa fa fa 04 fa\n=>0x0c047fff8010: fa fa[01]fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n  Shadow gap:              cc\n==3832654==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_deduplicate": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_deduplicate\n",
+            "stderr": "=================================================================\n==3832811==ERROR: AddressSanitizer: heap-use-after-free on address 0x602000000010 at pc 0x7fb06daf83ad bp 0x7ffc5e335750 sp 0x7ffc5e334ef8\nREAD of size 2 at 0x602000000010 thread T0\n    #0 0x7fb06daf83ac in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:443\n    #1 0x55aa667cd1f3 in ref_list_update_item_at_pos /home/gustavo/git/codex_study_grading/repos/3533dacf-349b-4581-bc32-6b9f015199c1/reflist.c:164\n    #2 0x55aa667cc989 in list_deduplicate parts/gen_list_deduplicate.c:43\n    #3 0x55aa667d89a9 in test_list_deduplicate tests_orig/test_list_deduplicate.c:25\n    #4 0x55aa667d6c6b in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #5 0x55aa667d71ab in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #6 0x55aa667d7bd9 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #7 0x55aa667d8d73 in main tests_orig/test_list_deduplicate.c:36\n    #8 0x7fb06d863fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #9 0x7fb06d86407c in __libc_start_main_impl ../csu/libc-start.c:409\n    #10 0x55aa667cc804 in _start (/home/gustavo/git/codex_study_grading/repos/3533dacf-349b-4581-bc32-6b9f015199c1/tests_orig/test_list_deduplicate.bin+0x5804)\n\n0x602000000010 is located 0 bytes inside of 6-byte region [0x602000000010,0x602000000016)\nfreed by thread T0 here:\n    #0 0x7fb06db6f40f in __interceptor_free ../../../../src/libsanitizer/asan/asan_malloc_linux.cc:122\n    #1 0x55aa667cd1e7 in ref_list_update_item_at_pos /home/gustavo/git/codex_study_grading/repos/3533dacf-349b-4581-bc32-6b9f015199c1/reflist.c:162\n    #2 0x55aa667cc989 in list_deduplicate parts/gen_list_deduplicate.c:43\n    #3 0x55aa667d89a9 in test_list_deduplicate tests_orig/test_list_deduplicate.c:25\n    #4 0x55aa667d6c6b in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #5 0x55aa667d71ab in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #6 0x55aa667d7bd9 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #7 0x55aa667d8d73 in main tests_orig/test_list_deduplicate.c:36\n    #8 0x7fb06d863fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\npreviously allocated by thread T0 here:\n    #0 0x7fb06daf83ed in __interceptor_strdup ../../../../src/libsanitizer/asan/asan_interceptors.cc:445\n    #1 0x55aa667ccec6 in ref_list_add_item_at_pos /home/gustavo/git/codex_study_grading/repos/3533dacf-349b-4581-bc32-6b9f015199c1/reflist.c:118\n    #2 0x55aa667d8942 in test_list_deduplicate tests_orig/test_list_deduplicate.c:23\n    #3 0x55aa667d6c6b in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #4 0x55aa667d71ab in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #5 0x55aa667d7bd9 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #6 0x55aa667d8d73 in main tests_orig/test_list_deduplicate.c:36\n    #7 0x7fb06d863fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: heap-use-after-free ../../../../src/libsanitizer/asan/asan_interceptors.cc:443 in __interceptor_strdup\nShadow bytes around the buggy address:\n  0x0c047fff7fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n=>0x0c047fff8000: fa fa[fd]fa fa fa 06 fa fa fa fa fa fa fa fa fa\n  0x0c047fff8010: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\n  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n  Shadow gap:              cc\n==3832811==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        }
+    },
+    "passed": 9,
+    "total": 12,
+    "passed_functional": 9,
+    "total_functional": 12
+}

@@ -1,0 +1,116 @@
+============= Compiled =============
+          Percentage                              
+               count        mean median        std
+Group                                             
+Assisted          30   94.242424  100.0  12.515783
+Autopilot          5  100.000000  100.0   0.000000
+Control           29   89.341693  100.0  20.768722
+
+==> Stats comparing Assisted to Autopilot on Compiled
+Welch T-test (two-sided): -2.520, p-value: 1.751001E-02 (significant)
+Mann-Whitney U test (two-sided): 55.000, p-value: 2.109853E-01 (no evidence)
+T-test from Pingouin (two-sided):
+               T   dof alternative    p-val            CI95%   cohen-d   BF10     power
+T-test -2.519662  29.0   two-sided  0.01751  [-10.43, -1.08]  0.490727  3.377  0.166778
+
+==> Stats comparing Assisted to Control on Compiled
+Welch T-test (two-sided): 1.093, p-value: 2.800228E-01 (no evidence)
+Mann-Whitney U test (two-sided): 473.000, p-value: 4.846082E-01 (no evidence)
+T-test from Pingouin (two-sided):
+               T        dof alternative     p-val           CI95%   cohen-d   BF10     power
+T-test  1.093236  45.674868   two-sided  0.280023  [-4.12, 13.93]  0.286999  0.436  0.191579
+
+==> Stats comparing Autopilot to Control on Compiled
+Welch T-test (two-sided): 2.764, p-value: 9.991568E-03 (strong evidence)
+Mann-Whitney U test (two-sided): 97.500, p-value: 1.380831E-01 (no evidence)
+T-test from Pingouin (two-sided):
+               T   dof alternative     p-val          CI95%   cohen-d   BF10     power
+T-test  2.763614  28.0   two-sided  0.009992  [2.76, 18.56]  0.548624  5.057  0.195787
+
+============= Implemented =============
+          Percentage                                 
+               count       mean     median        std
+Group                                                
+Assisted          30  63.030303  63.636364  32.378262
+Autopilot          5  89.090909  90.909091   7.606000
+Control           29  46.708464  27.272727  36.422366
+
+==> Stats comparing Assisted to Autopilot on Implemented
+Welch T-test (two-sided): -3.821, p-value: 6.591492E-04 (strong evidence)
+Mann-Whitney U test (two-sided): 45.500, p-value: 1.670143E-01 (no evidence)
+T-test from Pingouin (two-sided):
+               T        dof alternative     p-val            CI95%   cohen-d    BF10     power
+T-test -3.821084  28.628914   two-sided  0.000659  [-40.02, -12.1]  0.855347  42.631  0.404987
+
+==> Stats comparing Assisted to Control on Implemented
+Welch T-test (two-sided): 1.817, p-value: 7.459253E-02 (weak evidence)
+Mann-Whitney U test (two-sided): 547.000, p-value: 8.705166E-02 (weak evidence)
+T-test from Pingouin (two-sided):
+               T        dof alternative     p-val           CI95%   cohen-d   BF10    power
+T-test  1.817024  55.722629   two-sided  0.074593  [-1.67, 34.32]  0.474138  1.036  0.43261
+
+==> Stats comparing Autopilot to Control on Implemented
+Welch T-test (two-sided): 5.598, p-value: 4.138851E-06 (strong evidence)
+Mann-Whitney U test (two-sided): 110.500, p-value: 6.438102E-02 (weak evidence)
+T-test from Pingouin (two-sided):
+              T        dof alternative     p-val           CI95%   cohen-d      BF10     power
+T-test  5.59826  30.359715   two-sided  0.000004  [26.93, 57.84]  1.240124  3072.859  0.699718
+
+============= Basic Tests =============
+          Percentage                                 
+               count       mean     median        std
+Group                                                
+Assisted          30  37.272727  31.818182  32.677601
+Autopilot          5  32.727273  36.363636  10.365231
+Control           29  28.840125   9.090909  36.369234
+
+==> Stats comparing Assisted to Autopilot on Basic Tests
+Welch T-test (two-sided): 0.602, p-value: 5.540243E-01 (no evidence)
+Mann-Whitney U test (two-sided): 72.500, p-value: 9.243614E-01 (no evidence)
+T-test from Pingouin (two-sided):
+               T        dof alternative     p-val            CI95%   cohen-d   BF10     power
+T-test  0.601629  20.477568   two-sided  0.554024  [-11.19, 20.28]  0.147364  0.472  0.060117
+
+==> Stats comparing Assisted to Control on Basic Tests
+Welch T-test (two-sided): 0.936, p-value: 3.534170E-01 (no evidence)
+Mann-Whitney U test (two-sided): 523.500, p-value: 1.755601E-01 (no evidence)
+T-test from Pingouin (two-sided):
+               T        dof alternative     p-val           CI95%   cohen-d   BF10     power
+T-test  0.935771  55.890136   two-sided  0.353417  [-9.62, 26.49]  0.244138  0.381  0.151566
+
+==> Stats comparing Autopilot to Control on Basic Tests
+Welch T-test (two-sided): 0.475, p-value: 6.394519E-01 (no evidence)
+Mann-Whitney U test (two-sided): 95.500, p-value: 2.639436E-01 (no evidence)
+T-test from Pingouin (two-sided):
+               T        dof alternative     p-val           CI95%   cohen-d   BF10     power
+T-test  0.474541  23.729906   two-sided  0.639452  [-13.03, 20.8]  0.113602  0.452  0.055957
+
+============= Expanded Tests =============
+          Percentage                                 
+               count       mean     median        std
+Group                                                
+Assisted          30  25.736434  23.255814  19.986132
+Autopilot          5  33.023256  39.534884  18.267290
+Control           29  16.198877  11.627907  17.496954
+
+==> Stats comparing Assisted to Autopilot on Expanded Tests
+Welch T-test (two-sided): -0.814, p-value: 4.479537E-01 (no evidence)
+Mann-Whitney U test (two-sided): 54.500, p-value: 3.447630E-01 (no evidence)
+T-test from Pingouin (two-sided):
+               T       dof alternative     p-val            CI95%   cohen-d   BF10     power
+T-test -0.814419  5.723843   two-sided  0.447954  [-29.44, 14.86]  0.368286  0.522  0.114784
+
+==> Stats comparing Assisted to Control on Expanded Tests
+Welch T-test (two-sided): 1.952, p-value: 5.589498E-02 (weak evidence)
+Mann-Whitney U test (two-sided): 557.500, p-value: 6.339418E-02 (weak evidence)
+T-test from Pingouin (two-sided):
+               T        dof alternative     p-val           CI95%   cohen-d   BF10     power
+T-test  1.952078  56.457626   two-sided  0.055895  [-0.25, 19.32]  0.507193  1.274  0.482032
+
+==> Stats comparing Autopilot to Control on Expanded Tests
+Welch T-test (two-sided): 1.914, p-value: 1.101003E-01 (no evidence)
+Mann-Whitney U test (two-sided): 112.500, p-value: 5.359985E-02 (weak evidence)
+T-test from Pingouin (two-sided):
+               T       dof alternative   p-val           CI95%   cohen-d   BF10     power
+T-test  1.913648  5.346404   two-sided  0.1101  [-5.34, 38.99]  0.956197  1.409  0.482232
+

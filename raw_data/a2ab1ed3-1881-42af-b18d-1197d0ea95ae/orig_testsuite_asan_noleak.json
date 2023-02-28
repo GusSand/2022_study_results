@@ -1,0 +1,92 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_item_to_string": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_print": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n",
+            "stderr": "=================================================================\n==3816523==ERROR: AddressSanitizer: global-buffer-overflow on address 0x563cb5467e40 at pc 0x7f4d6ff681c5 bp 0x7fff89c8a6c0 sp 0x7fff89c89e68\nWRITE of size 26 at 0x563cb5467e40 thread T0\n    #0 0x7f4d6ff681c4 in __interceptor_strcat ../../../../src/libsanitizer/asan/asan_interceptors.cc:384\n    #1 0x563cb545c54f in test_printf test_common.h:57\n    #2 0x563cb5450912 in list_print parts/gen_list_print.c:40\n    #3 0x563cb545c95f in test_list_print tests_orig/test_list_print.c:27\n    #4 0x563cb545ab9f in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #5 0x563cb545b0df in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #6 0x563cb545bb0d in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #7 0x563cb545cba4 in main tests_orig/test_list_print.c:40\n    #8 0x7f4d6fcbbfcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #9 0x7f4d6fcbc07c in __libc_start_main_impl ../csu/libc-start.c:409\n    #10 0x563cb5450804 in _start (/home/gustavo/git/codex_study_grading/repos/a2ab1ed3-1881-42af-b18d-1197d0ea95ae/tests_orig/test_list_print.bin+0x6804)\n\n0x563cb5467e40 is located 0 bytes to the right of global variable 'big_buffer' defined in './test_common.h:42:13' (0x563cb5467a40) of size 1024\nSUMMARY: AddressSanitizer: global-buffer-overflow ../../../../src/libsanitizer/asan/asan_interceptors.cc:384 in __interceptor_strcat\nShadow bytes around the buggy address:\n  0x0ac816a84f70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac816a84f80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac816a84f90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac816a84fa0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac816a84fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n=>0x0ac816a84fc0: 00 00 00 00 00 00 00 00[f9]f9 f9 f9 00 00 00 00\n  0x0ac816a84fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac816a84fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac816a84ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac816a85000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n  0x0ac816a85010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\nShadow byte legend (one shadow byte represents 8 application bytes):\n  Addressable:           00\n  Partially addressable: 01 02 03 04 05 06 07 \n  Heap left redzone:       fa\n  Freed heap region:       fd\n  Stack left redzone:      f1\n  Stack mid redzone:       f2\n  Stack right redzone:     f3\n  Stack after return:      f5\n  Stack use after scope:   f8\n  Global redzone:          f9\n  Global init order:       f6\n  Poisoned by user:        f7\n  Container overflow:      fc\n  Array cookie:            ac\n  Intra object redzone:    bb\n  ASan internal:           fe\n  Left alloca redzone:     ca\n  Right alloca redzone:    cb\n  Shadow gap:              cc\n==3816523==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_save": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        }
+    },
+    "passed": 0,
+    "total": 12,
+    "passed_functional": 0,
+    "total_functional": 12
+}

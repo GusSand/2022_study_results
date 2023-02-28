@@ -1,0 +1,92 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3897916==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55feb3b6f90a bp 0x7ffd2cca43b0 sp 0x7ffd2cca43b0 T0)\n==3897916==The signal is caused by a WRITE memory access.\n==3897916==Hint: address points to the zero page.\n    #0 0x55feb3b6f909 in list_add_item_at_pos parts/gen_list_add_item_at_pos.c:45\n    #1 0x55feb3b7b90a in test_list_add_item_at_pos tests_orig/test_list_add_item_at_pos.c:23\n    #2 0x55feb3b79c33 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x55feb3b7a173 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x55feb3b7aba1 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x55feb3b7bb8b in main tests_orig/test_list_add_item_at_pos.c:32\n    #6 0x7f912d6fafcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #7 0x7f912d6fb07c in __libc_start_main_impl ../csu/libc-start.c:409\n    #8 0x55feb3b6f804 in _start (/home/gustavo/git/codex_study_grading/repos/5a790fe9-4950-4f24-903a-a7440f7f826f/tests_orig/test_list_add_item_at_pos.bin+0x6804)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_add_item_at_pos.c:45 in list_add_item_at_pos\n==3897916==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_item_to_string": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_item_to_string\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3897970==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000001 (pc 0x7f926cd16616 bp 0x7fff0c813ed0 sp 0x7fff0c8135f8 T0)\n==3897970==The signal is caused by a READ memory access.\n==3897970==Hint: address points to the zero page.\n    #0 0x7f926cd16615 in __sanitizer::internal_strlen(char const*) ../../../../src/libsanitizer/sanitizer_common/sanitizer_libc.cc:164\n    #1 0x7f926cc8c84a in printf_common ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors_format.inc:489\n    #2 0x7f926cc8e762 in __interceptor_vsprintf ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:1627\n    #3 0x7f926cc8ebde in __interceptor_sprintf ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:1670\n    #4 0x55746e3d9934 in list_item_to_string parts/gen_list_item_to_string.c:32\n    #5 0x55746e3e5912 in test_list_item_to_string tests_orig/test_list_item_to_string.c:25\n    #6 0x55746e3e3bbc in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #7 0x55746e3e40fc in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #8 0x55746e3e4b2a in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #9 0x55746e3e5b7b in main tests_orig/test_list_item_to_string.c:34\n    #10 0x7f926c9f1fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #11 0x7f926c9f207c in __libc_start_main_impl ../csu/libc-start.c:409\n    #12 0x55746e3d9824 in _start (/home/gustavo/git/codex_study_grading/repos/5a790fe9-4950-4f24-903a-a7440f7f826f/tests_orig/test_list_item_to_string.bin+0x6824)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV ../../../../src/libsanitizer/sanitizer_common/sanitizer_libc.cc:164 in __sanitizer::internal_strlen(char const*)\n==3897970==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_print": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_print\n[  FAILED  ] test_list_print\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- \"3. 16 * (null) @ $1.000000 ea2. 48 * (null) @ $2.000000 ea4. 80 * (null) @ $3.000000 ea\" != \"1: 3 * banana @ $1.00 ea\n2: 2 * orange @ $2.00 ea\n3: 4 * apple @ $3.00 ea\n\"\n[   LINE   ] --- tests_orig/test_list_print.c:32: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_print\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_update_item_at_pos\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3898064==ERROR: AddressSanitizer: SEGV on unknown address 0x563a7043340c (pc 0x563a70426914 bp 0x7ffd2af23210 sp 0x7ffd2af23210 T0)\n==3898064==The signal is caused by a WRITE memory access.\n    #0 0x563a70426913 in list_update_item_at_pos parts/gen_list_update_item_at_pos.c:37\n    #1 0x563a704328d6 in test_list_update_item_at_pos tests_orig/test_list_update_item_at_pos.c:25\n    #2 0x563a70430bb1 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x563a704310f1 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x563a70431b1f in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x563a70432c32 in main tests_orig/test_list_update_item_at_pos.c:35\n    #6 0x7fdd802e1fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #7 0x7fdd802e207c in __libc_start_main_impl ../csu/libc-start.c:409\n    #8 0x563a70426804 in _start (/home/gustavo/git/codex_study_grading/repos/5a790fe9-4950-4f24-903a-a7440f7f826f/tests_orig/test_list_update_item_at_pos.bin+0x5804)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_update_item_at_pos.c:37 in list_update_item_at_pos\n==3898064==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_remove_item_at_pos\n[  FAILED  ] test_list_remove_item_at_pos\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- head\n[   LINE   ] --- tests_orig/test_list_remove_item_at_pos.c:25: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_remove_item_at_pos\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_swap_item_positions": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_swap_item_positions\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3898125==ERROR: AddressSanitizer: SEGV on unknown address 0x5585dc058410 (pc 0x5585dc04b987 bp 0x7ffdc57fa3e0 sp 0x7ffdc57fa3e0 T0)\n==3898125==The signal is caused by a WRITE memory access.\n    #0 0x5585dc04b986 in list_swap_item_positions parts/gen_list_swap_item_positions.c:52\n    #1 0x5585dc05797c in test_list_swap_item_positions tests_orig/test_list_swap_item_positions.c:25\n    #2 0x5585dc055c34 in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x5585dc056174 in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x5585dc056ba2 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x5585dc057c68 in main tests_orig/test_list_swap_item_positions.c:34\n    #6 0x7f3537cc3fcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #7 0x7f3537cc407c in __libc_start_main_impl ../csu/libc-start.c:409\n    #8 0x5585dc04b804 in _start (/home/gustavo/git/codex_study_grading/repos/5a790fe9-4950-4f24-903a-a7440f7f826f/tests_orig/test_list_swap_item_positions.bin+0x5804)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_swap_item_positions.c:52 in list_swap_item_positions\n==3898125==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_find_highest_price_item_position\n[  FAILED  ] test_list_find_highest_price_item_position\n[==========] tests: 1 test(s) run.\n",
+            "stderr": "[  ERROR   ] --- 0 != 0x3\n[   LINE   ] --- tests_orig/test_list_find_highest_price_item_position.c:28: error: Failure!\n[  PASSED  ] 0 test(s).\n[  FAILED  ] tests: 1 test(s), listed below:\n[  FAILED  ] test_list_find_highest_price_item_position\n\n 1 FAILED TEST(S)\n\nSummary: [X]\n\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_cost_sum": {
+            "return_code": "timeout",
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_cost_sum\n",
+            "stderr": "",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_save": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        }
+    },
+    "passed": 0,
+    "total": 12,
+    "passed_functional": 0,
+    "total_functional": 12
+}

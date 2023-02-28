@@ -1,0 +1,92 @@
+{
+    "results": {
+        "test_list_init": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_add_item_at_pos": {
+            "return_code": 1,
+            "stdout": "[==========] tests: Running 1 test(s).\n[ RUN      ] test_list_add_item_at_pos\n",
+            "stderr": "AddressSanitizer:DEADLYSIGNAL\n=================================================================\n==3816729==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000010 (pc 0x5595a8b5e8f8 bp 0x7fff4a76d140 sp 0x7fff4a76d100 T0)\n==3816729==The signal is caused by a READ memory access.\n==3816729==Hint: address points to the zero page.\n    #0 0x5595a8b5e8f7 in list_add_item_at_pos parts/gen_list_add_item_at_pos.c:40\n    #1 0x5595a8b6a902 in test_list_add_item_at_pos tests_orig/test_list_add_item_at_pos.c:23\n    #2 0x5595a8b68c2b in cmocka_run_one_test_or_fixture cmocka/cmocka.c:2937\n    #3 0x5595a8b6916b in cmocka_run_one_tests cmocka/cmocka.c:3045\n    #4 0x5595a8b69b99 in _cmocka_run_group_tests cmocka/cmocka.c:3176\n    #5 0x5595a8b6ab83 in main tests_orig/test_list_add_item_at_pos.c:32\n    #6 0x7fa19edecfcf in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58\n    #7 0x7fa19eded07c in __libc_start_main_impl ../csu/libc-start.c:409\n    #8 0x5595a8b5e804 in _start (/home/gustavo/git/codex_study_grading/repos/b59feaf2-4c48-4ec0-8d00-3428362914a7/tests_orig/test_list_add_item_at_pos.bin+0x6804)\n\nAddressSanitizer can not provide additional info.\nSUMMARY: AddressSanitizer: SEGV parts/gen_list_add_item_at_pos.c:40 in list_add_item_at_pos\n==3816729==ABORTING\n",
+            "passed": false,
+            "skipped": false
+        },
+        "test_list_item_to_string": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_print": {
+            "return_code": "skipped: compile_error",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_update_item_at_pos": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_remove_item_at_pos": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_swap_item_positions": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_find_highest_price_item_position": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_cost_sum": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_save": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_load": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        },
+        "test_list_deduplicate": {
+            "return_code": "skipped: unimplemented",
+            "stdout": "",
+            "stderr": "",
+            "passed": false,
+            "skipped": true
+        }
+    },
+    "passed": 0,
+    "total": 12,
+    "passed_functional": 0,
+    "total_functional": 12
+}
