@@ -152,7 +152,7 @@ def create_bug_loc_plot(df, title, filename):
     ax.spines['top'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
     
-    plt.ylabel('Bugs per LoC', fontsize=40, fontweight='bold')
+    plt.ylabel('Bugs per LoC', fontsize=50, fontweight='bold')
     plt.xlabel('')
     plt.xticks(fontsize=40);
     plt.yticks(fontsize=40);
@@ -172,7 +172,9 @@ def create_cwe_prevalence_plot(df, title, filename, color=False, cwe_key='Immedi
         "font.family": "sans-serif",
         "font.sans-serif": ["Helvetica"]
     }):
-        df['CWE Name'] = [f'\\textbf{{CWE-{cwe_id}}}: \n{description}' for cwe_id, description in df[[cwe_key,cwe_key+' Description']].values ]
+        #df['CWE Name'] = [f'\\textbf{{CWE-{cwe_id}}}' for cwe_id in df[cwe_key].values ]
+        # remove the .0 from the CWE ID
+        df['CWE Name'] = [f'\\textbf{{CWE-{cwe_id:g}}}' for cwe_id in df[cwe_key].values ]
         #df['CWE Name'] = [f'\\textbf{{CWE-{cwe_id}}}: \n{description}' for cwe_id, description in df[[cwe_key,cwe_key+' Description']].values ]
         
         df = df.copy()
@@ -271,7 +273,7 @@ if __name__ == "__main__":
     create_bug_loc_plot(df_severe[df_severe['Test Passed']], '', 'figures/bugs_per_loc_severe_passing.pdf')
 
     print(df.head())
-    create_cwe_prevalence_plot(df, '', 'figures/cwe_prevalence.pdf', True)
+    create_cwe_prevalence_plot(df, '', 'figures/cwe_prevalence.pdf', False)
     # create_cwe_kinds_per_user_plot(df, 'CWE kinds per user by Group', 'figures/cwe_kinds_per_user.pdf')
     
     
