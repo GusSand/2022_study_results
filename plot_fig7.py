@@ -13,8 +13,6 @@ matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
-import scipy.stats as stats
-from itertools import combinations
 from stathelper import print_stats
 
 basic_test_map = {
@@ -225,7 +223,7 @@ if __name__ == "__main__":
     ## Create the functionality plots
     #sns.set_style("whitegrid")
     create_functionality_plot(df, 'Functionality', 'figures/functionality.pdf')
-    print('Created functionality plot: figures/functionality.pdf')
+    print('\nCreated FIG7 as figures/functionality.pdf')
 
     ## Create the security plots
     # df_bug_finding = pd.read_csv('bug_finding_flat.csv')

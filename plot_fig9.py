@@ -2,8 +2,6 @@
 
 from multiprocessing.resource_sharer import DupFd
 from textwrap import wrap
-from tkinter import font
-from venv import create
 import pandas as pd
 import numpy as np
 import seaborn as sns
