@@ -110,7 +110,7 @@ def test_parse_date_to_hours():
 
 def plot_time_data():
     # Read the csv file into a pandas DataFrame
-    df = pd.read_csv('auxdata/histogram_data_study.csv')
+    df = pd.read_csv('data/histogram_data_study.csv')
     #df.describe()
 
 
