@@ -22,3 +22,6 @@ Figure 9:
 
 
 plot_time_data.py - Uses the data from the data folder to generate a histogram for the time that the students took to finalize the study. It's called histogram_of_study_duration.pdf in the figures folder.
+
+
+Inferioririty_per_func.py - Code to reproduce the inferiority tests. 
