@@ -5,10 +5,6 @@ import matplotlib
 matplotlib.rcParams['pdf.fonttype'] = 42
 matplotlib.rcParams['ps.fonttype'] = 42
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-from matplotlib.ticker import PercentFormatter
-
-
 
 def parse_date_to_hours(duration_str):
     
