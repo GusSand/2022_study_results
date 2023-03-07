@@ -14,6 +14,10 @@ matplotlib.rcParams['ps.fonttype'] = 42
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 from stathelper import print_stats
+import warnings
+
+# Suppress warnings
+warnings.filterwarnings('ignore')
 
 basic_test_map = {
     # 'list_init': ['test_list_init'],
