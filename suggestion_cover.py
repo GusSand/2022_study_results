@@ -30,7 +30,7 @@ args = parser.parse_args()
 
 if args.output is None:
     output_file = sys.stdout
-    json_out = open('suggestion_cover.jsonl', 'w')
+    json_out = open('data/derived_data/suggestion_cover.jsonl', 'w')
 else:
     output_file = open(args.output, 'w')
     json_out = open(args.output.replace(".html",".jsonl"),'w')
@@ -402,7 +402,7 @@ def match_lines_difflib(template, candidate):
     # Add the newlines back in and join each group
     return [(label, ''.join(l+"\n" for l in group), None) for label, group in match_groups]
 
-anubis = json.load(open('data/dumpv5_audit.json'))
+anubis = json.load(open('data/llm_log_dump.json'))
 active_inactive = load_active_inactive('data/active_inactive.txt')
 codex_users = [uuid for uuid in active_inactive if active_inactive[uuid] == 'Active' and uuid in anubis]
 

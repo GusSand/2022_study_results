@@ -18,7 +18,7 @@ counts['approx'] = 0
 counts['exact'] = 0
 counts['unknown'] = 0
 counts['unrecorded'] = 0
-of = open('data/bug_origin_all.jsonl', 'w')
+of = open('data/derived_data/bug_origin_all.jsonl', 'w')
 for line in read_bug_annotations():
     if not line: continue
     uuid, _, data = line.split(':',2)

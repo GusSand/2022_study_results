@@ -217,9 +217,9 @@ if __name__ == "__main__":
 
 
     df = create_functionality_dataframe("data/bug_finding.json", "data/active_inactive.txt")
-    df.to_csv('functional_tests.csv', index=False)
+    df.to_csv('data/derived_data/functional_tests.csv', index=False)
     # Write out the functionality stats
-    with open('data/functionality_stats.txt', 'w') as outfile:
+    with open('data/derived_data/functionality_stats.txt', 'w') as outfile:
         print_functionality_stats(df, outfile)
 
     sns.set_style("whitegrid")

@@ -47,7 +47,7 @@ def non_inferiority_ttest(mean1, stddev1, n1, mean2, stddev2, n2, relative_diffe
 
 
 # read the tsv file into a pandas DataFrame
-df = pd.read_csv('data/table3.tsv', sep='\t')
+df = pd.read_csv('data/derived_data/table3.tsv', sep='\t')
 
 # get a list of the unique functions in the function_name column
 functions = df['function_name'].unique()

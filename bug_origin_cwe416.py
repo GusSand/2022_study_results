@@ -30,7 +30,7 @@ def match_bug(line):
 cwe416 = Bug('CWE-416', 'Use After Free', 'Missing strdup (Potential Use After Free) (or similar)', match_bug, normalize)
 
 # Load the data
-anubis = json.load(open('data/dumpv5_audit.json'))
+anubis = json.load(open('data/llm_log_dump.json'))
 bug_data = pd.read_csv('data/bug_finding_flat.csv')
 
 # Only care about Codex users
