@@ -2,6 +2,12 @@
 
 This repository contains the results of the 2022 study described in the Paper: `Lost at C: A User Study on the security implications of Large Language Model Code Assistants`  Link: https://arxiv.org/pdf/2208.09727.pdf
 
+## To reproduce the results
+- create a virtual environment with python 3.8 or above 
+- activate the virtual environment
+- install the requirements with `pip install -r requirements.txt`
+
+
 ## Data
 The data folder contains all the data used by the python scripts to recreate the plots. There's also the raw data folder which contains the raw data from the study and it's also used by some of the scripts. 
 

@@ -137,7 +137,7 @@ def create_bug_loc_plot(df, title, filename):
     loc_per_group_uuid = df.groupby(['Function', 'Group', 'UUID'])['Function LoC'].first().groupby(['Group','UUID']).sum()
     bugs_per_loc_uuid = (bugs_per_group_uuid / loc_per_group_uuid).reset_index().rename(columns={0: 'Bugs per LoC'})
     
-    print(f'filename f{bugs_per_loc_uuid.count()}')
+    #print(f'filename f{bugs_per_loc_uuid.count()}')
 
     # Plot as barplot
     sns.boxplot(x='Group', y='Bugs per LoC', notch=False,  data=bugs_per_loc_uuid, showfliers = False, ax=ax, 
