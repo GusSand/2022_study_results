@@ -166,15 +166,18 @@ def create_cwe_prevalence_plot(df, title, filename, color=False, cwe_key='Immedi
     df = df.copy()
     # Add nicer descriptions to the CWEs
     with plt.rc_context({
-        "text.usetex": True,
-        "font.family": "sans-serif",
-        "font.sans-serif": ["Helvetica"]
+        #NOTE: The paper used latex versions of these figures to bold the CWE titles, but
+        # this adds a dependency on latex. If you want to use latex, uncomment
+        # the following lines and switch lines 177/178 commented/uncommented.
+
+        #"text.usetex": True,
+        #"font.family": "sans-serif",
+        #"font.sans-serif": ["Helvetica"]
     }):
-        #df['CWE Name'] = [f'\\textbf{{CWE-{cwe_id}}}' for cwe_id in df[cwe_key].values ]
-        # remove the .0 from the CWE ID
-        df['CWE Name'] = [f'\\textbf{{CWE-{cwe_id:g}}}' for cwe_id in df[cwe_key].values ]
-        #df['CWE Name'] = [f'\\textbf{{CWE-{cwe_id}}}: \n{description}' for cwe_id, description in df[[cwe_key,cwe_key+' Description']].values ]
-        
+
+        #df['CWE Name'] = [f'\\textbf{{CWE-{cwe_id:g}}}' for cwe_id in df[cwe_key].values ]
+        df['CWE Name'] = [f'CWE-{cwe_id:g}' for cwe_id in df[cwe_key].values ]
+         
         df = df.copy()
         df['Group'] = df['Group'].replace('Codex', 'Assisted').replace('Non-Codex','Control')
 
