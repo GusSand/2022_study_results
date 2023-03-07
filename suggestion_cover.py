@@ -493,9 +493,9 @@ def get_suggestion_cursor_func(suggestion):
 for uuid in codex_users:
     print(f"Processing {uuid}...", file=sys.stderr)
     # Get the unmodified list.c
-    unmodified_document = open(os.path.join('raw_data', 'unmodified', 'list.c')).read()
+    unmodified_document = open(os.path.join('data', 'submitted_assignments', 'unmodified', 'list.c')).read()
     # Get their final list.c
-    document_file = os.path.join('raw_data', uuid, 'list.c')
+    document_file = os.path.join('data', 'submitted_assignments', uuid, 'list.c')
     if not os.path.exists(document_file): continue
     final_document = open(document_file).read()
     # If it doesn't end with a newline, add one for consistency

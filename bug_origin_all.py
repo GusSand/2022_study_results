@@ -1,7 +1,7 @@
 import json
 import subprocess
 
-def read_bug_annotations(data_dir='raw_data/recombined_list_files/Active'):
+def read_bug_annotations(data_dir='data/submitted_assignments/recombined_list_files/Active'):
     # Read the bug annotations from the list.c files using... grep
     bug_data = subprocess.check_output('grep "// bug [0-9]" *.c', shell=True, cwd=data_dir, text=True)
     return bug_data.split('\n')
