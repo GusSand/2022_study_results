@@ -1,0 +1,12 @@
+s/\blist_add_item_at_pos\b/ref_list_add_item_at_pos/
+s/\blist_cost_sum\b/ref_list_cost_sum/
+s/\blist_deduplicate\b/ref_list_deduplicate/
+s/\blist_find_highest_price_item_position\b/ref_list_find_highest_price_item_position/
+s/\blist_init\b/ref_list_init/
+s/\blist_item_to_string\b/ref_list_item_to_string/
+s/\blist_load\b/ref_list_load/
+s/\blist_print\b/ref_list_print/
+s/\blist_remove_item_at_pos\b/ref_list_remove_item_at_pos/
+s/\blist_save\b/ref_list_save/
+s/\blist_swap_item_positions\b/ref_list_swap_item_positions/
+s/\blist_update_item_at_pos\b/ref_list_update_item_at_pos/
