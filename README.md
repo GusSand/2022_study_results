@@ -84,7 +84,11 @@ This produces `data/derived_data/table3.tsv`.
 
 Then, we perform the non-inferiority tests by running
 
-- `python inferioririty_per_func.py` - Code to reproduce the results of the inferiority tests. Results are printed to the terminad.
+```
+python inferioririty_per_func.py
+```
+
+This prints the results of the non-inferiority tests to the terminal.
 
 #### Table 4:
 
@@ -148,3 +152,5 @@ uuid,origin,num_bug_in_all_suggestions,num_bugs_in_taken_suggestions,bug_count_i
 26a4,Suggestion,3,1,2
 [...]
 ```
+
+#### Table 7:
