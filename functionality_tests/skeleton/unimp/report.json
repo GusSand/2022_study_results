@@ -1,0 +1,45 @@
+{
+  "preamble": "parts/preamble.c",
+  "uncovered": "parts/extra.c",
+  "functions": {
+    "list_init": [
+      "parts/list_init.c"
+    ],
+    "list_item_to_string": [
+      "parts/list_item_to_string.c"
+    ],
+    "list_print": [
+      "parts/list_print.c"
+    ],
+    "list_add_item_at_pos": [
+      "parts/list_add_item_at_pos.c"
+    ],
+    "list_update_item_at_pos": [
+      "parts/list_update_item_at_pos.c"
+    ],
+    "list_remove_item_at_pos": [
+      "parts/list_remove_item_at_pos.c"
+    ],
+    "list_swap_item_positions": [
+      "parts/list_swap_item_positions.c"
+    ],
+    "list_find_highest_price_item_position": [
+      "parts/list_find_highest_price_item_position.c"
+    ],
+    "list_cost_sum": [
+      "parts/list_cost_sum.c"
+    ],
+    "list_save": [
+      "parts/list_save.c"
+    ],
+    "list_load": [
+      "parts/list_load.c"
+    ],
+    "list_deduplicate": [
+      "parts/list_deduplicate.c"
+    ]
+  },
+  "extra_functions": {},
+  "dups": {},
+  "extra_dups": {}
+}

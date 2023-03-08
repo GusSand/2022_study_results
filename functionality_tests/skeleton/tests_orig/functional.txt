@@ -1,0 +1,12 @@
+test_list_init
+test_list_add_item_at_pos
+test_list_item_to_string
+test_list_print
+test_list_update_item_at_pos
+test_list_remove_item_at_pos
+test_list_swap_item_positions
+test_list_find_highest_price_item_position
+test_list_cost_sum
+test_list_save
+test_list_load
+test_list_deduplicate

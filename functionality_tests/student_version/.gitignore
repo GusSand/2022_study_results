@@ -1,0 +1,4 @@
+.vscode
+**/*.o
+runtests
+mylist
