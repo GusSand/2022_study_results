@@ -3,9 +3,22 @@
 This repository contains the results of the 2022 study described in the Paper: `Lost at C: A User Study on the security implications of Large Language Model Code Assistants`  Link: https://arxiv.org/pdf/2208.09727.pdf
 
 ## To reproduce the results
-- create a virtual environment with python 3.8 or above
-- activate the virtual environment
-- install the requirements with `pip install -r requirements.txt`
+Ensure the dependencies are installed. These should be able to be installed on Debian-based Linux systems with: 
+```
+$ sudo apt-get install python3 python3-pip parallel
+$ sudo pip3 install virtualenv
+```
+
+Activate the virtual environment
+```
+$ virtualenv venv
+$ source venv/bin/activate
+```
+
+Install the requirements
+```
+$ pip install -r requirements.txt
+```
 
 
 ## Data
@@ -85,7 +98,7 @@ This produces `data/derived_data/table3.tsv`.
 Then, we perform the non-inferiority tests by running
 
 ```
-python inferioririty_per_func.py
+python inferiority_per_func.py
 ```
 
 This prints the results of the non-inferiority tests to the terminal.
