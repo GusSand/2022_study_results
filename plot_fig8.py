@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as stats
 import json
 import matplotlib.ticker as mtick
+import os
 
 matplotlib.pyplot.switch_backend('agg')
 
@@ -143,7 +144,10 @@ def create_bug_loc_plot(df, title, filename):
     sns.boxplot(x='Group', y='Bugs per LoC', notch=False,  data=bugs_per_loc_uuid, showfliers = False, ax=ax, 
                 order=['Control', 'Assisted', 'Autopilot'])
     ax.set_title('\n'.join(wrap(title,30)), fontsize=30)
-    
+
+    # Added by BDG to create bugs_per_loc_{compiled,passing,severe_compiled,severe_passing}.csv
+    csv_filename = 'data/derived_data/' + os.path.splitext(os.path.basename(filename))[0] + '.csv'
+    bugs_per_loc_uuid.to_csv(csv_filename, index=False)    
 
     #fig.suptitle(title)
     ax.spines['right'].set_visible(False)
