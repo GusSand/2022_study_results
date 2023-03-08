@@ -30,7 +30,7 @@ args = parser.parse_args()
 
 if args.output is None:
     output_file = sys.stdout
-    json_out = open('suggestion_cover.jsonl', 'w')
+    json_out = open('data/derived_data/suggestion_cover.jsonl', 'w')
 else:
     output_file = open(args.output, 'w')
     json_out = open(args.output.replace(".html",".jsonl"),'w')
@@ -402,7 +402,7 @@ def match_lines_difflib(template, candidate):
     # Add the newlines back in and join each group
     return [(label, ''.join(l+"\n" for l in group), None) for label, group in match_groups]
 
-anubis = json.load(open('data/dumpv5_audit.json'))
+anubis = json.load(open('data/llm_log_dump.json'))
 active_inactive = load_active_inactive('data/active_inactive.txt')
 codex_users = [uuid for uuid in active_inactive if active_inactive[uuid] == 'Active' and uuid in anubis]
 
@@ -493,9 +493,9 @@ def get_suggestion_cursor_func(suggestion):
 for uuid in codex_users:
     print(f"Processing {uuid}...", file=sys.stderr)
     # Get the unmodified list.c
-    unmodified_document = open(os.path.join('raw_data', 'unmodified', 'list.c')).read()
+    unmodified_document = open(os.path.join('data', 'submitted_assignments', 'unmodified', 'list.c')).read()
     # Get their final list.c
-    document_file = os.path.join('raw_data', uuid, 'list.c')
+    document_file = os.path.join('data', 'submitted_assignments', uuid, 'list.c')
     if not os.path.exists(document_file): continue
     final_document = open(document_file).read()
     # If it doesn't end with a newline, add one for consistency

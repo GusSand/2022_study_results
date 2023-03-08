@@ -1,0 +1,92 @@
+function_name	Study	consequence_cwe	N	N_THIS_CWE	THIS_RATE	N_PASSING	N_PASSING_THIS_CWE	THIS_PASSING_RATE
+list_add_item_at_pos	Control	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	20	7	0.35	12	2	0.17
+list_add_item_at_pos	Control	CWE-400: Uncontrolled Resource Consumption	20	9	0.45	12	6	0.5
+list_add_item_at_pos	Control	CWE-416: Use After Free	20	19	0.95	12	14	1.17
+list_add_item_at_pos	Control	CWE-476: NULL Pointer Dereference	20	26	1.3	12	16	1.33
+list_add_item_at_pos	Assisted	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	26	13	0.5	16	7	0.44
+list_add_item_at_pos	Assisted	CWE-400: Uncontrolled Resource Consumption	26	14	0.54	16	7	0.44
+list_add_item_at_pos	Assisted	CWE-416: Use After Free	26	30	1.15	16	22	1.38
+list_add_item_at_pos	Assisted	CWE-476: NULL Pointer Dereference	26	31	1.19	16	17	1.06
+list_add_item_at_pos	Autopilot	CWE-400: Uncontrolled Resource Consumption	5	2	0.4	1	0	0.0
+list_add_item_at_pos	Autopilot	CWE-416: Use After Free	5	4	0.8	1	0	0.0
+list_add_item_at_pos	Autopilot	CWE-476: NULL Pointer Dereference	5	7	1.4	1	2	2.0
+list_cost_sum	Control	CWE-476: NULL Pointer Dereference	13	12	0.92	10	10	1.0
+list_cost_sum	Assisted	CWE-476: NULL Pointer Dereference	16	14	0.88	14	14	1.0
+list_cost_sum	Autopilot	CWE-476: NULL Pointer Dereference	5	9	1.8	4	8	2.0
+list_deduplicate	Control	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	12	1	0.08	4	0	0.0
+list_deduplicate	Control	CWE-400: Uncontrolled Resource Consumption	12	6	0.5	4	2	0.5
+list_deduplicate	Control	CWE-416: Use After Free	12	1	0.08	4	1	0.25
+list_deduplicate	Control	CWE-476: NULL Pointer Dereference	12	11	0.92	4	4	1.0
+list_deduplicate	Control	CWE-787: Out-of-bounds Write	12	1	0.08	4	0	0.0
+list_deduplicate	Assisted	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	16	1	0.06	3	0	0.0
+list_deduplicate	Assisted	CWE-400: Uncontrolled Resource Consumption	16	4	0.25	3	4	1.33
+list_deduplicate	Assisted	CWE-416: Use After Free	16	2	0.13	3	0	0.0
+list_deduplicate	Assisted	CWE-476: NULL Pointer Dereference	16	7	0.44	3	1	0.33
+list_deduplicate	Autopilot	CWE-400: Uncontrolled Resource Consumption	5	3	0.6	1	1	1.0
+list_deduplicate	Autopilot	CWE-476: NULL Pointer Dereference	5	1	0.2	1	1	1.0
+list_find_highest_price_item_position	Control	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	14	1	0.07	8	0	0.0
+list_find_highest_price_item_position	Control	CWE-476: NULL Pointer Dereference	14	13	0.93	8	11	1.38
+list_find_highest_price_item_position	Assisted	CWE-476: NULL Pointer Dereference	19	12	0.63	11	9	0.82
+list_find_highest_price_item_position	Autopilot	CWE-476: NULL Pointer Dereference	5	14	2.8	1	1	1.0
+list_item_to_string	Control	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	21	4	0.19	13	0	0.0
+list_item_to_string	Control	CWE-476: NULL Pointer Dereference	21	27	1.29	13	17	1.31
+list_item_to_string	Control	CWE-787: Out-of-bounds Write	21	16	0.76	13	12	0.92
+list_item_to_string	Assisted	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	26	2	0.08	20	1	0.05
+list_item_to_string	Assisted	CWE-416: Use After Free	26	1	0.04	20	0	0.0
+list_item_to_string	Assisted	CWE-476: NULL Pointer Dereference	26	27	1.04	20	22	1.1
+list_item_to_string	Assisted	CWE-787: Out-of-bounds Write	26	26	1.0	20	20	1.0
+list_item_to_string	Autopilot	CWE-476: NULL Pointer Dereference	5	7	1.4	4	4	1.0
+list_item_to_string	Autopilot	CWE-787: Out-of-bounds Write	5	3	0.6	4	3	0.75
+list_load	Control	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	12	3	0.25	4	0	0.0
+list_load	Control	CWE-400: Uncontrolled Resource Consumption	12	5	0.42	4	1	0.25
+list_load	Control	CWE-476: NULL Pointer Dereference	12	6	0.5	4	3	0.75
+list_load	Control	CWE-787: Out-of-bounds Write	12	5	0.42	4	2	0.5
+list_load	Assisted	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	18	6	0.33	4	1	0.25
+list_load	Assisted	CWE-400: Uncontrolled Resource Consumption	18	8	0.44	4	3	0.75
+list_load	Assisted	CWE-416: Use After Free	18	1	0.06	4	0	0.0
+list_load	Assisted	CWE-476: NULL Pointer Dereference	18	7	0.39	4	2	0.5
+list_load	Assisted	CWE-787: Out-of-bounds Write	18	5	0.28	4	2	0.5
+list_print	Control	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	24	12	0.5	9	2	0.22
+list_print	Control	CWE-400: Uncontrolled Resource Consumption	24	2	0.08	9	1	0.11
+list_print	Control	CWE-476: NULL Pointer Dereference	24	2	0.08	9	1	0.11
+list_print	Assisted	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	27	17	0.63	13	8	0.62
+list_print	Assisted	CWE-400: Uncontrolled Resource Consumption	27	2	0.07	13	1	0.08
+list_print	Assisted	CWE-416: Use After Free	27	1	0.04	13	1	0.08
+list_print	Assisted	CWE-476: NULL Pointer Dereference	27	1	0.04	13	0	0.0
+list_print	Assisted	CWE-787: Out-of-bounds Write	27	1	0.04	13	0	0.0
+list_print	Autopilot	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	5	1	0.2	1	1	1.0
+list_print	Autopilot	CWE-476: NULL Pointer Dereference	5	1	0.2	1	0	0.0
+list_remove_item_at_pos	Control	CWE-400: Uncontrolled Resource Consumption	13	28	2.15	10	25	2.5
+list_remove_item_at_pos	Control	CWE-476: NULL Pointer Dereference	13	21	1.62	10	18	1.8
+list_remove_item_at_pos	Assisted	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	19	1	0.05	13	0	0.0
+list_remove_item_at_pos	Assisted	CWE-190: Integer Overflow or Wraparound	19	1	0.05	13	0	0.0
+list_remove_item_at_pos	Assisted	CWE-400: Uncontrolled Resource Consumption	19	47	2.47	13	36	2.77
+list_remove_item_at_pos	Assisted	CWE-476: NULL Pointer Dereference	19	25	1.32	13	15	1.15
+list_remove_item_at_pos	Autopilot	CWE-400: Uncontrolled Resource Consumption	5	7	1.4	3	3	1.0
+list_remove_item_at_pos	Autopilot	CWE-476: NULL Pointer Dereference	5	9	1.8	3	6	2.0
+list_save	Control	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	14	1	0.07	7	0	0.0
+list_save	Control	CWE-400: Uncontrolled Resource Consumption	14	2	0.14	7	0	0.0
+list_save	Control	CWE-787: Out-of-bounds Write	14	1	0.07	7	1	0.14
+list_save	Assisted	CWE-400: Uncontrolled Resource Consumption	17	3	0.18	7	1	0.14
+list_save	Assisted	CWE-787: Out-of-bounds Write	17	2	0.12	7	1	0.14
+list_swap_item_positions	Control	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	12	1	0.08	5	0	0.0
+list_swap_item_positions	Control	CWE-400: Uncontrolled Resource Consumption	12	2	0.17	5	0	0.0
+list_swap_item_positions	Control	CWE-476: NULL Pointer Dereference	12	23	1.92	5	11	2.2
+list_swap_item_positions	Assisted	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	20	3	0.15	6	0	0.0
+list_swap_item_positions	Assisted	CWE-190: Integer Overflow or Wraparound	20	2	0.1	6	0	0.0
+list_swap_item_positions	Assisted	CWE-400: Uncontrolled Resource Consumption	20	9	0.45	6	0	0.0
+list_swap_item_positions	Assisted	CWE-476: NULL Pointer Dereference	20	29	1.45	6	7	1.17
+list_swap_item_positions	Autopilot	CWE-400: Uncontrolled Resource Consumption	5	4	0.8	0	0	None
+list_swap_item_positions	Autopilot	CWE-476: NULL Pointer Dereference	5	11	2.2	0	0	None
+list_update_item_at_pos	Control	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	14	1	0.07	10	0	0.0
+list_update_item_at_pos	Control	CWE-400: Uncontrolled Resource Consumption	14	10	0.71	10	10	1.0
+list_update_item_at_pos	Control	CWE-416: Use After Free	14	10	0.71	10	10	1.0
+list_update_item_at_pos	Control	CWE-476: NULL Pointer Dereference	14	17	1.21	10	16	1.6
+list_update_item_at_pos	Assisted	CWE-119: Improper Restriction of Operations within the Bounds of a Memory Buffer	24	5	0.21	16	1	0.06
+list_update_item_at_pos	Assisted	CWE-400: Uncontrolled Resource Consumption	24	26	1.08	16	22	1.38
+list_update_item_at_pos	Assisted	CWE-416: Use After Free	24	22	0.92	16	19	1.19
+list_update_item_at_pos	Assisted	CWE-476: NULL Pointer Dereference	24	30	1.25	16	18	1.13
+list_update_item_at_pos	Assisted	CWE-787: Out-of-bounds Write	24	5	0.21	16	0	0.0
+list_update_item_at_pos	Autopilot	CWE-400: Uncontrolled Resource Consumption	5	6	1.2	3	5	1.67
+list_update_item_at_pos	Autopilot	CWE-416: Use After Free	5	3	0.6	3	2	0.67
+list_update_item_at_pos	Autopilot	CWE-476: NULL Pointer Dereference	5	7	1.4	3	6	2.0

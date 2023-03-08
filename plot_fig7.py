@@ -55,7 +55,7 @@ def load_active_inactive(active_inactive_txt):
 
 def make_rows(uuid, active_inactive, bug_data=None):
     rows = []
-    repo_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), f'raw_data/{uuid}')
+    repo_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), f'data/submitted_assignments/{uuid}')
     if not os.path.exists(repo_dir):
         return []
     # Handle the Codex autopilot case
@@ -94,7 +94,7 @@ def make_rows(uuid, active_inactive, bug_data=None):
 def create_functionality_dataframe(bug_finding_json, active_inactive_file):
     active_inactive = load_active_inactive(active_inactive_file)
     bug_data_all = json.load(open(bug_finding_json))
-    repo_uuids = set(map(os.path.basename, glob.glob('raw_data/*-*-*-*')))
+    repo_uuids = set(map(os.path.basename, glob.glob('data/submitted_assignments/*-*-*-*')))
     if len(repo_uuids) < 1:
         raise ValueError(f'No REPOS!!!')
     rows = []
@@ -217,9 +217,9 @@ if __name__ == "__main__":
 
 
     df = create_functionality_dataframe("data/bug_finding.json", "data/active_inactive.txt")
-    df.to_csv('functional_tests.csv', index=False)
+    df.to_csv('data/derived_data/functional_tests.csv', index=False)
     # Write out the functionality stats
-    with open('data/functionality_stats.txt', 'w') as outfile:
+    with open('data/derived_data/functionality_stats.txt', 'w') as outfile:
         print_functionality_stats(df, outfile)
 
     sns.set_style("whitegrid")
