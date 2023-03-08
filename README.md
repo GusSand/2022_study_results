@@ -61,6 +61,16 @@ This script uses the data from the data folder to generate figure 8 which contai
 2 figures for bugs per lines of code that compile: `figures/bugs_per_loc_compiled.pdf` and `figures/bugs_per_loc_severe_compiled.pdf`.
 In additions there are also two figures for lines of code that pass tests: `figures/bugs_per_loc_passing.pdf` and `figures/bugs_per_loc_severe_passing.pdf`.
 
+This script also generates 4 CSV files with the data used to generate the statistical tests, the files will be created in `data/derived_data/`. 
+
+To run the statistical tests, run the following scripts:
+
+```
+inferiority_tests.py
+```
+This will print the results of the non-inferiority tests to the terminal.
+
+
 #### Figure 9:
 
 This figure is generated with a single script, as follows:
